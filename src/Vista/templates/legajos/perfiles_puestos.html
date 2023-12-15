@@ -1,0 +1,580 @@
+{{{PERFILES_PUESTOS}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off">
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left">
+      <h6 class="dom">
+          <i class="fa fa-product-hunt" aria-hidden="true"></i>
+        Puesto
+      </h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Familia de Puestos</label>
+        {{{FAMILIAS_PUESTOS}}}
+        <select name="familia_puestos" id="familia_puestos" class="form-control">
+          <option value="" selected disabled>Seleccione</option>
+          {{{FAMILIA_PUESTOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/FAMILIA_PUESTOS}}}
+        </select>
+        {{{/FAMILIAS_PUESTOS}}}
+        {{{SPAN_FAMILIAS_PUESTOS}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_FAMILIAS_PUESTOS}}}
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Nombre del Puesto</label>
+        {{{NOMBRES_PUESTOS}}}
+        <select name="nombre_puesto" id="nombre_puesto" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+        {{{SUB_FAMILIA}}}
+          <optgroup label="{{{SUB}}}">
+          {{{NOMBRE_PUESTO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/NOMBRE_PUESTO}}}
+          </optgroup>
+        {{{/SUB_FAMILIA}}}
+        </select>
+        {{{/NOMBRES_PUESTOS}}}
+        {{{SPAN_NOMBRES_PUESTOS}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_NOMBRES_PUESTOS}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="" class="control-label">Nivel de Destreza</label>
+        {{{NIVELES_DESTREZA}}}
+        <select name="nivel_destreza" id="nivel_destreza" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+          {{{NIVEL_DESTREZA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/NIVEL_DESTREZA}}}
+        </select>
+        {{{/NIVELES_DESTREZA}}}
+        {{{SPAN_NIVELES_DESTREZA}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_NIVELES_DESTREZA}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="" class="control-label">Puesto Supervisa</label>
+        {{{PUESTOS_SUPERVISA}}}
+        <select name="puesto_supervisa" id="puesto_supervisa" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+          {{{PUESTO_SUPERVISA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/PUESTO_SUPERVISA}}}
+        </select>
+        {{{/PUESTOS_SUPERVISA}}}
+        {{{SPAN_PUESTOS_SUPERVISA}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_PUESTOS_SUPERVISA}}}
+      </div>
+    </div>
+  </div>
+  <div class="row">    
+    <div class="col-md-9">
+      <div class="form-group">
+        <label for="denominacion_funcion" class="control-label">Denominación de la Función</label>
+        {{{TDR_DENOMINACIONES_FUNCION}}}
+        <select name="denominacion_funcion" id="denominacion_funcion" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+          {{{TDR_DENOMINACION_FUNCION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/TDR_DENOMINACION_FUNCION}}}
+        </select>
+        {{{/TDR_DENOMINACIONES_FUNCION}}}
+        {{{SPAN_DENOMINACIONES_FUNCION}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_DENOMINACIONES_FUNCION}}}
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Denominación del Puesto</label>
+        {{{DENOMINACIONES_PUESTO}}}
+        <select name="denominacion_puesto" id="denominacion_puesto" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+          {{{DENOMINACION_PUESTO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/DENOMINACION_PUESTO}}}
+        </select>
+        {{{/DENOMINACIONES_PUESTO}}}
+        {{{SPAN_DENOMINACIONES_PUESTO}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_DENOMINACIONES_PUESTO}}}
+      </div>
+    </div>
+  </div>
+  <div class="row">    
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">
+           Objetivo General 
+        </label>
+        {{{OBJETIVOS_GENERALES}}}
+        <textarea name="objetivo_general"  style="height: 54px;" cols="5" rows="3" cols="5" rows="3" class="form-control">{{{OBJETIVO_GENERAL}}}</textarea>
+        {{{/OBJETIVOS_GENERALES}}}
+        {{{SPAN_OBJETIVOS_GENERALES}}}
+          <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_OBJETIVOS_GENERALES}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">
+           Objetivo Específicos
+        </label>
+        {{{OBJETIVOS_ESPECIFICOS}}}
+        <textarea name="objetivo_especificos" style="height: 54px;" cols="5" rows="3" class="form-control">{{{OBJETIVO_ESPECIFICO}}}</textarea>
+        {{{/OBJETIVOS_ESPECIFICOS}}}
+        {{{SPAN_OBJETIVOS_ESPECIFICOS}}}
+          <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_OBJETIVOS_ESPECIFICOS}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">
+           Estándares Cuanti/Cualitativos
+        </label>
+        {{{CUANTI}}}
+        <textarea name="estandares" style="height: 54px;" cols="5" rows="3" class="form-control">{{{ESTANDAR}}}</textarea>
+        {{{/CUANTI}}}
+        {{{SPAN_ESTANDARES}}}
+          <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_ESTANDARES}}}
+      </div>
+    </div>
+  </div>
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left">
+      <h6 class="dom">
+          <i class="fa fa-list-ul" aria-hidden="true"></i>
+        Actividades/Tareas
+      </h6>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="complejidad_tareas" class="control-label">Nivel de Complejidad de las Tareas</label>
+        {{{COMPLEJIDADES_TAREAS}}}
+        <select name="complejidad_tareas" id="complejidad_tareas" class="form-control">
+          <option value="0" selected disabled>Seleccione</option>
+          {{{COMPLEJIDAD_TAREA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/COMPLEJIDAD_TAREA}}}
+        </select>
+        {{{/COMPLEJIDADES_TAREAS}}}
+        {{{SPAN_COMPLEJIDADES_TAREAS}}}
+          <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_COMPLEJIDADES_TAREAS}}}
+      </div>
+    </div>
+  </div>  
+  
+
+  <div class="row">
+    <div class="especial_pad">  
+      <label for="" class="control-label">
+        Actividades/Tareas
+      </label>
+    </div>
+{{{TODOS_ACTIVIDADES}}}     
+    {{{ACTIVIDADES}}}
+    <div class="block-copy col-xs-12">
+      <div class="entry input-group">
+        <textarea class="form-control" rows="2" name="actividades[{{{VALUE}}}]">{{{TEXT}}}</textarea>    
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-remove" type="button">
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+    {{{/ACTIVIDADES}}}
+    {{{SPAN_ACTIVIDADES}}}
+    <div class="entry col-xs-12  form-group">
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+    </div>
+    <br>
+    {{{/SPAN_ACTIVIDADES}}}
+
+{{{/TODOS_ACTIVIDADES}}}      
+{{{NUEVAS_ACTIVIDADES}}}
+  <div class="block-copy col-xs-12">
+    <div class="entry input-group">
+      <textarea class="form-control" rows="2" name="actividades[]">{{{TEXT}}}</textarea>
+      <span class="input-group-btn">
+        <button class="btn btn-info btn-add" type="button">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+{{{/NUEVAS_ACTIVIDADES}}}
+  </div>
+
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left">
+      <h6 class="dom">
+          <i class="fa fa-list-alt" aria-hidden="true"></i>
+          Resultados Parciales/Finales
+      </h6>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">
+          Fecha de Obtención Resultado
+        </label>
+        {{{OBTENCION_RESULT}}}
+        <input type="text" name="fecha_obtencion_result" class="form-control fecha libre" value="{{{FECHA_OBTENCION_RESULT}}}">
+        {{{/OBTENCION_RESULT}}}
+        {{{SPAN_OBTENCION_RESULT}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_OBTENCION_RESULT}}}      
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+        <div class="especial_pad">  
+            <label for="" class="control-label">
+              Resultados Parciales/Finales
+            </label>
+        </div>
+        {{{TODOS_LOS_RESULTADOS_FP}}}
+          {{{RESULTADOS}}}
+            <div class="block-copy col-xs-12">
+              <div class="entry input-group">
+                <textarea class="form-control" rows="2" name="resultados_finales[{{{VALUE}}}]">{{{TEXT}}}</textarea>
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-remove" type="button">
+                    <span class="glyphicon glyphicon-minus"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          {{{/RESULTADOS}}}
+          {{{SPAN_RESULTADOS}}}
+            <div class="entry col-xs-12 form-group">
+              <span class="form-control" disabled>{{{VALUE}}}</span>
+            </div>
+          {{{/SPAN_RESULTADOS}}}
+        {{{/TODOS_LOS_RESULTADOS_FP}}}
+        {{{NUEVOS_RESULTADOS}}}
+          <div class="block-copy col-xs-12">
+            <div class="entry input-group">
+              <textarea class="form-control" rows="2" name="resultados_finales[]"></textarea>
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-add" type="button">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </span>
+            </div>    
+          </div>
+        {{{/NUEVOS_RESULTADOS}}}
+  </div>
+
+<!----------------------------------evaluaciones----------------------------------------------------->
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left">
+    <h6 class="dom">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        Evaluaciones
+    </h6>
+  </div>
+</div>  
+{{{EVALUACIONES}}}
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="anio" class="control-label"> A&ntilde;o </label>
+          <span class="form-control" name="evaluacion_anio" id="evaluacion_anio" disabled>{{{ANIO}}}</span>
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Formulario</label>
+        <span class="form-control" name="evaluacion_formulario" id="evaluacion_formulario" disabled>{{{FORMULARIO}}}</span>
+      </div>
+    </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="" class="control-label">Evaluaci&oacute;n</label>
+          <span class="form-control" name="evaluacion_resuxltado" id="evaluacion_resultado" disabled>{{{EVALUACION}}}</span>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="form-group">
+          <label for="" class="control-label">Puntaje</label>
+          <span class="form-control" name="evaluacion_puntaje" id="evaluacion_puntaje" disabled>{{{PUNTAJE}}}</span>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="form-group">
+          <label for="" class="control-label">Bonificaci&oacute;n</label>
+          <span class="form-control" name="evaluacion_bonificado" id="evaluacion_bonificado" disabled>{{{BONIFICADO}}}</span>
+        </div>
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="control-label">Acto Administrativo</label>
+           <span name="acto_administrativo" class="form-control" disabled>{{{ACTO_ADMINISTRATIVO}}}</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+        <label for="ver" class="control-label"> &nbsp; </label>
+        <div class="form-group">
+        {{{ARCHIVO}}}
+          <a class="btn btn-info" id="ver"  href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true"><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+        {{{/ARCHIVO}}}
+        {{{URL_NUEVA_EVALUACION}}}
+        <a class="btn btn-primary" href="{{{VALUE}}}" data-toggle="tooltip" data-placement="top" data-id=""
+      title="Nueva Evaluación" target="_self"></i>NUEVA</a>
+    {{{/URL_NUEVA_EVALUACION}}}
+    {{{URL_HISTORIAL}}}
+        <a class="btn btn-info" href="{{{VALUE}}}" data-toggle="tooltip" data-placement="top" data-id=""
+        title="Historial de Evaluaciones" data-toggle="modal" target="_self"></i>HISTORIAL</a>
+    {{{/URL_HISTORIAL}}}
+        </div>     
+        </div>
+        </div>
+
+</div>
+{{{/EVALUACIONES}}}
+<!--------------------------------------------------------------------------------------->
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+          <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="perfiles_puestos" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/PERFILES_PUESTOS}}}
+
+{{{SPAN_PERFILES_PUESTOS}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left">
+    <h6 class="dom">
+        <i class="fa fa-product-hunt" aria-hidden="true"></i>
+      Puesto
+    </h6>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 form-group">
+    <label class="control-label">Familia de Puestos</label>
+    <span class="form-control" disabled>{{{FAMILIA_PUESTOS}}}</span>
+  </div>
+  <div class="col-md-4 form-group">
+    <label class="control-label">Nombre del Puesto</label>
+    <span class="form-control" disabled>{{{NOMBRE_PUESTO}}}</span>
+  </div>
+  <div class="col-md-2 form-group">
+    <label class="control-label">Nivel de Destreza</label>
+    <span class="form-control" disabled>{{{NIVEL_DESTREZA}}}</span>
+  </div>
+  <div class="col-md-2 form-group">
+    <label class="control-label">Puesto Supervisa</label>
+    <span class="form-control" disabled>{{{PUESTO_SUPERVISA}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 form-group">
+    <label class="control-label">Denominación de la Función</label>
+    <span class="form-control" disabled>{{{TDR_DENOMINACION_FUNCION}}}</span>
+  </div>
+  <div class="col-md-4 form-group">
+    <label class="control-label">Denominación del Puesto</label>
+    <span class="form-control" disabled>{{{DENOMINACION_PUESTO}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="" class="control-label">
+         Objetivo General 
+      </label>
+        <span class="form-control span-textarea" disabled>{{{OBJETIVO_GENERAL}}}</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="" class="control-label">
+         Objetivo Específicos
+      </label>
+        <span class="form-control span-textarea" disabled>{{{OBJETIVOS_ESPECIFICOS}}}</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="" class="control-label">
+         Estándares Cuanti/Cualitativos
+      </label>
+      <span class="form-control span-textarea" disabled>{{{ESTANDARES}}}</span>
+    </div>
+  </div>
+</div>
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left">
+    <h6 class="dom">
+        <i class="fa fa-list-ul" aria-hidden="true"></i>
+      Actividades/Tareas
+    </h6>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 form-group">
+    <label class="control-label">Nivel de Complejidad de las Tareas</label>
+    <span class="form-control" disabled>{{{COMPLEJIDAD_TAREAS}}}</span>
+  </div> 
+</div>
+<div class="row">   
+  <div class="especial_pad">  
+      <label for="" class="control-label">
+        Tareas
+      </label>
+  </div>
+    {{{SPAN_ACTIVIDADES}}}
+    <div class="col-md-12 form-group">    
+      <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+    </div> 
+    {{{/SPAN_ACTIVIDADES}}}
+</div>
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left">
+    <h6 class="dom">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+          Resultados Parciales/Finales
+    </h6>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 form-group">
+    <label for="" class="control-label">
+      Fecha de Obtención Resultado
+    </label>
+    <span class="form-control" disabled>{{{OBTENCION_RESULT}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="especial_pad">  
+      <label for="" class="control-label">
+        Resultados Parciales/Finales
+      </label>
+  </div>
+  {{{SPAN_RESULTADOS}}}
+    <div class="entry col-xs-12 form-group">
+      <span class="form-control span-textarea" disabled>{{{VALUE}}}</span>
+    </div>
+  {{{/SPAN_RESULTADOS}}}
+</div>
+<!-------------------------------------------------------------------------------------------------->
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left">
+    <h6 class="dom">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        Evaluaciones
+    </h6>
+  </div>
+</div> 
+{{{EVALUACIONES}}}
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-1">
+    <div class="form-group">
+      <label for="anio" class="control-label"> A&ntilde;o </label>
+      <span class="form-control" name="evaluacion_anio" id="evaluacion_anio" disabled>{{{ANIO}}}</span>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="" class="control-label">Formulario</label>
+      <span class="form-control" name="evaluacion_formulario" id="evaluacion_formulario" disabled>{{{FORMULARIO}}}</span>
+    </div>
+  </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Evaluaci&oacute;n</label>
+        <span class="form-control" name="evaluacion_resultado" id="evaluacion_resultado" disabled>{{{EVALUACION}}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Puntaje</label>
+        <span class="form-control" name="evaluacion_puntaje" id="evaluacion_puntaje" disabled>{{{PUNTAJE}}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Bonificaci&oacute;n</label>
+        <span class="form-control" name="evaluacion_bonificado" id="evaluacion_bonificado" disabled>{{{BONIFICADO}}}</span>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Acto Administrativo</label>
+         <span name="acto_administrativo" class="form-control" disabled>{{{ACTO_ADMINISTRATIVO}}}</span>
+      </div>
+    </div>
+    {{{ARCHIVO}}}
+    <div class="col-md-3">
+      <label for="ver" class="control-label"> &nbsp; </label>
+        <div class="form-group">
+         <a class="btn btn-info" id="ver"  href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true"><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+      </div>
+    </div>
+    {{{/ARCHIVO}}}
+</div>
+{{{/EVALUACIONES}}}
+<!-------------------------------------------------------------------------------------------------->
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-right">
+      <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+    </div>
+  </div>
+</div>
+{{{ADJUNTAR_DOC}}}
+{{{/SPAN_PERFILES_PUESTOS}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

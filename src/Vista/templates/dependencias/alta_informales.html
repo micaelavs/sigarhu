@@ -1,0 +1,43 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="nombre">Dependencia Informal<span class="required">*</span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+ </div>
+<div class="row">
+  <div class="col-md-2"></div>  
+<div class="col-md-6 form-group">
+  <label class="control-label" for="id_dependencia">Dependencia Padre <span class="text-danger"> *</span></label>
+  <select class="form-control activarSelect2" id="id_dependencia" name="id_dependencia">
+    <option value=""> Seleccione </option>
+     {{{DEPENDENCIA}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     {{{/DEPENDENCIA}}}
+  </select>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-2"></div> 
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="fecha_desde" class="control-label"> Fecha Desde<span class="text-danger"> *</span></label>
+      <div class='input-group date' id="fecha_desde">
+        <input type='text' class="form-control fecha " id="fecha_desde" name="fecha_desde" value="{{{FECHA_DESDE}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+  <div class="row">
+    <div class="col-md-8 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_dependencia_informal" value="{{{OPERACION}}}" id='boton_dependencia' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

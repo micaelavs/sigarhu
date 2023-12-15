@@ -1,0 +1,31 @@
+<form id="{{{FORM}}}" method='POST' action="" autocomplete="off">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 form-group">
+      <label class="control-label" for="id_padre">Modalidad de Vinculación<span class="text-danger"> *</span></label>
+      <select class="form-control" id="id_mod_vinculacion" name="id_mod_vinculacion" >
+        <option value=""> Seleccione </option>
+         {{{MODALIDAD_VINCULACION}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+         {{{/MODALIDAD_VINCULACION}}}
+      </select>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="form-group">
+        <label class="control-label" for="nombre">Situación de Revista <span class="required">*</span></label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_sit_revista" value="{{{OPERACION}}}" id='boton_sit_revista' title="Guardar">{{{BOTON}}}</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

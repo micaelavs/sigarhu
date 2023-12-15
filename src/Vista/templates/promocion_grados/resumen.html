@@ -1,0 +1,65 @@
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 alert alert-info">
+            <p class="h4">Datos del Agente: </p>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="control-label">Cuit: <strong>{{{CUIT}}}</strong></label>
+                </div>
+                <div class="col-md-8">
+                    <span class="control-label">Nombre Apellido: <strong>{{{NOMBRE}}} {{{APELLIDO}}}</strong></label></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="control-label">Fecha Promoción: <strong>{{{FECHA_PROMOCION}}}</strong></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 alert alert-info">
+            <p class="h4">Datos de Promocion</p>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="control-label">Motivo: <strong>{{{MOTIVO}}}</strong></label></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="control-label">Periodo Evaluado: <strong>{{{EVALUACION_INICIO}}} - {{{EVALUACION_FIN}}}</strong></label>
+                </div>
+                <div class="col-md-4">
+                    <span class="control-label">Grado promocionado: <strong>{{{NUEVO_GRADO}}}</strong></label></label>
+                </div>
+                <div class="col-md-4">
+                    <span class="control-label">Numero Expediente: <strong>{{{NUMERO_EXPEDIENDE}}}</strong></label></label>
+                    </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="control-label">Acto Administrativo: <strong>{{{ACTO_ADMINISTRATIVO}}}</strong></label></label>
+                </div>
+                <div class="col-md-4">
+                    {{{ARCHIVO}}}
+                        <a class="btn btn-sm btn-info " href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Ver Archivo"  data-toggle="modal" target = "_blank"   aria-hidden="true" ><i class="fa fa-eye"></i>  Ver Archivo</a > 
+                    {{{/ARCHIVO}}}
+                </div>
+            </div>
+            <hr />
+            <p><strong>Recuento de Creditos:</strong></p>
+            <div class="row">
+                <div class="col-md-3">
+                    <span class="control-label">Requeridos: <strong>{{{REQUERIDOS}}}</strong></label>
+                </div>
+                <div class="col-md-3">
+                    <span class="control-label">Reconocidos: <strong>{{{RECONOCIDOS}}}</strong></label>
+                </div>
+                <div class="col-md-3">
+                    <span class="control-label">Descontados: <strong>{{{DESCONTADOS}}}</strong></label>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,183 @@
+{{{CAMPOS_PRESUPUESTO}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-bar-chart" aria-hidden="true"></i> Presupuesto</h6></div>
+  <div class="col-xs-9 text-right"></div>
+</div>
+<form action="{{{FORM}}}" method="POST" autocomplete="off">
+  <input id="id" type="hidden" name="id" value="{{{ID_PRESUPUESTO}}}">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="saf" class="control-label">Servicio Administrativo Financiero</label>
+        <select name="saf" id="saf" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SAF}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SAF}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+         <label for="jurisdiccion" class="control-label">Jurisdicción</label>
+        <select name="jurisdiccion" id="jurisdiccion" class="form-control">
+          <option value="">Seleccione</option>
+          {{{JURISDICCION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/JURISDICCION}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+         <label for="ubicacion_geografica" class="control-label">Ubicación Geográfica</label>
+        <select name="ubicacion_geografica" id="ubicacion_geografica" class="form-control">
+          <option value="">Seleccione</option>
+          {{{UBICACION_GEOGRAFICA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/UBICACION_GEOGRAFICA}}}
+        </select>
+      </div>
+    </div>
+</div>
+<div class="row">
+   <div class="col-md-4">
+      <div class="form-group">
+        <label for="programa" class="control-label">Programa</label>
+        <select name="programa" id="programa" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PROGRAMA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/PROGRAMA}}}
+        </select>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="subprograma" class="control-label">Subprograma</label>
+      <select name="subprograma" id="subprograma" class="form-control">
+        <option value="">Seleccione</option>
+        {{{SUBPROGRAMA}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/SUBPROGRAMA}}}
+      </select>
+    </div>
+  </div>
+   <div class="col-md-4">
+    <div class="form-group">
+      <label for="proyecto" class="control-label">Proyecto</label>
+      <select name="proyecto" id="proyecto" class="form-control">
+        <option value="">Seleccione</option>
+        {{{PROYECTO}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/PROYECTO}}}
+      </select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="actividad" class="control-label">Actividad</label>
+      <select name="actividad" id="actividad" class="form-control">
+        <option value="">Seleccione</option>
+        {{{ACTIVIDAD}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+        {{{/ACTIVIDAD}}}
+      </select>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="obra" class="control-label">Obra</label>
+      <select name="obra" id="obra" class="form-control" >
+        <option value="">Seleccione</option>
+        {{{OBRA}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/OBRA}}}
+      </select>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="presupuesto" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+  <button type="submit" id="buscar_presupuesto" name="buscar_presupuesto" value="buscar_presupuesto" hidden></button>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/CAMPOS_PRESUPUESTO}}}
+{{{SPAN_PRESUPUESTO}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+ Presupuesto</h6></div>
+  <div class="col-xs-9 text-right"></div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label">SAF</label>
+    <span class="form-control" disabled>{{{SAF}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Jurisdicción</label>
+    <span class="form-control" disabled>{{{JURISDICCION}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Ubicación Geográfica</label>
+    <span class="form-control" disabled>{{{UBICACION_GEOGRAFICA}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label">Programa</label>
+    <span class="form-control" disabled>{{{PROGRAMA}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Subprograma</label>
+    <span class="form-control" disabled>{{{SUBPROGRAMA}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Proyecto</label>
+    <span class="form-control" disabled>{{{PROYECTO}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label">Actividad</label>
+    <span class="form-control" disabled>{{{ACTIVIDAD}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Obra</label>
+    <span class="form-control" disabled>{{{OBRA}}}</span>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-right">
+      <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+    </div>
+  </div>
+</div>
+{{{ADJUNTAR_DOC}}}
+{{{/SPAN_PRESUPUESTO}}}
+{{{AVISO_PRESUPUESTO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso">{{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO_PRESUPUESTO}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

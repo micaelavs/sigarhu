@@ -1,0 +1,60 @@
+<div class="datos_contenido" id="abm_contratante">
+<form id="{{{FORM}}}" method='POST' action="" id="abm_contratante">
+	 <div class="row"  id="url-base" data_url='{{{URL_BASE}}}'></div>
+<div class="row">
+	<div class="row">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label for="dependencia" class="control-label">Dependencia <span class="required">*</span></label>
+				<select name="dependencia"  id="dependencia" class="form-control">
+		          <option value="">Seleccione Opciones</option>
+		            {{{DEPENDENCIA}}}
+		          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+		            {{{/DEPENDENCIA}}}
+		        </select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label for="contratante" class="control-label">Contratante <span class="required">*</span></label>
+				<select name="contratante"  id="contratante" class="form-control">
+		          <option value="">Seleccione Opciones</option>
+		            {{{CONTRATANTE}}}
+		          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+		            {{{/CONTRATANTE}}}
+		        </select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label for="firmante" class="control-label">Firmante <span class="required">*</span></label>
+				<select name="firmante[]"  multiple="multiple"   id="firmante" class="form-control">
+		          <option value="">Seleccione Opciones</option>
+		            {{{FIRMANTE}}}
+		          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+		            {{{/FIRMANTE}}}
+		        </select>
+			</div>
+		</div>
+	</div>
+
+</div>
+<br>
+<br>
+<br>
+ <div class="row">
+ 	<div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_contratante" value="{{{OPERACION}}}" id='boton_contratante' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form> 
+</div>

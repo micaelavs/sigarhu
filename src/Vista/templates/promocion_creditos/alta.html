@@ -1,0 +1,67 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-1"></div>
+
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="fecha_desde" class="control-label">Fecha Vigencia<span class="text-danger"> *</span></label>
+      <div class='input-group date'>
+        <input type='text' class="form-control fecha " id="fecha_desde" name="fecha_desde" value="{{{FECHA_DESDE}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label" for="tramo">Tramo<span class="text-danger"> *</span></label>
+    <select class="form-control" id="tramo" name="tramo">
+      <option value=""> Seleccione </option>
+      {{{TRAMO}}}
+      <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+      {{{/TRAMO}}}
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label class="control-label" for="nivel">Agrupamiento<span class="text-danger"> *</span></label>
+      <select class="form-control" id="agrupamiento" name="agrupamiento">
+        <option value=""> Seleccione </option>
+        {{{AGRUPAMIENTO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}} data-niveles='{{{NIVELES}}}'>{{{TEXT}}}</option>
+        {{{/AGRUPAMIENTO}}}
+      </select>
+  </div>
+  <div class="col-md-2">
+    <label class="control-label" for="nivel">Nivel<span class="text-danger"> *</span></label>
+      <select class="form-control" id="nivel" name="nivel">
+        <option value=""> Seleccione </option>
+      </select>
+    <input type="hidden" id="id_nivel" value="{{{NIVEL}}}">
+  </div>
+
+  <div class="col-md-2">
+    <div class="form-group">
+      <label class="control-label" for="creditos">Creditos<span class="text-danger"> *</span> </label>
+      <input type="number" min="1" class="form-control" id="creditos" name="creditos" value="{{{CREDITOS}}}">
+    </div>
+  </div>
+</div>
+<div class="row " id="divFechaHasta" data-operacion="{{{OPERACION}}}">
+  <div class="col-md-4"></div>
+  <div class="col-md-3 ">
+    <div class="form-group">
+      <label for="fecha_hasta" class="control-label">Fecha Cierre<br/><span class="text-danger" style="font-size:12px;">Necesaria para dar cierre al registro</span></label>
+      <div class='input-group date'>
+        <input type='text' class="text-center form-control fecha " id="fecha_hasta" name="fecha_hasta" value="{{{FECHA_hasta}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+ <div class="row">
+ 	<div class="col-md-2"></div>
+    <div class="col-md-8 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_creditos" value="{{{OPERACION}}}" id='boton_creditos' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form>

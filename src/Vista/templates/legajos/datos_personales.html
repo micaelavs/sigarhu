@@ -1,0 +1,394 @@
+{{{CAMPOS_ADMIN_RRHH}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data">
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-user"></i> Datos</h6></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2" style="overflow: hidden;">
+      <label class="control-label">Foto</label>
+      <div class="image-editor" id="image-editor">
+        <div class="form-group">
+            <input type="file" class="cropit-image-input" name="foto_persona" id="foto_persona">
+            <div class="cropit-preview"></div>
+              <input type="range" class="cropit-image-zoom-input">
+        </div>
+      </div>
+    </div>
+    <input type="hidden" name="foto" id="foto" value="">
+    <input type="hidden" name="foto_bd" id="foto_bd" value="{{{FOTO_PERSONA}}}">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nombre" class="control-label">Nombre <span class="required">*</span></label>
+            <input type="text" id="nombre" name="nombre" class="form-control" value="{{{NOMBRE}}}">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="apellido" class="control-label">Apellido <span class="required">*</span></label>
+            <input type="text" id="apellido" name="apellido" class="form-control" value="{{{APELLIDO}}}">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email" class="control-label">Email <span class="required">*</span></label>
+            <input type="email" name="email" id="email" class="form-control" value="{{{EMAIL}}}">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <label for="cuit_cuil" class="control-label">CUIT/CUIL <span class="required">*</span></label>
+            <input type="text" id="cuit_cuil" name="cuit" class="form-control" value="{{{CUIT}}}">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="tipo_documento" class="control-label">Tipo <span class="required">*</span></label>
+            <select name="tipo_documento" id="tipo_documento" name="tipo_documento" class="form-control">
+             <option value="">Seleccione</option>
+              {{{TIPO_DOCUMENTO}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/TIPO_DOCUMENTO}}}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="documento" class="control-label">Documento <span class="required">*</span></label>
+            <input type="text" id="documento" name="documento" class="form-control" value="{{{DOCUMENTO}}}">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="nacionalidad" class="control-label">Nacionalidad</label>
+            <select name="nacionalidad" id="nacionalidad" class="form-control">
+              <option value="">Seleccione</option>
+              {{{NACIONALIDAD}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/NACIONALIDAD}}}
+            </select>
+          </div>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="fecha" class="control-label">Fecha de Nacimiento <span class="required">*</span></label>
+            <div class="input-group date" id="fecha_nac">
+
+              <input type="text" class="form-control fecha" id="fecha_nac" name="fecha_nac" value="{{{FECHA_NAC}}}">
+
+              <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="genero" class="control-label">Genero <span class="required">*</span></label>
+            <select name="genero" id="genero" class="form-control">
+             <option value="">Seleccione</option>
+              {{{GENERO}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/GENERO}}}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="estado_civil" class="control-label">Estado Civil <span class="required">*</span></label>
+            <select name="estado_civil" id="estado_civil" class="form-control">
+              <option value="">Seleccione</option>
+              {{{ESTADO_CIVIL}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/ESTADO_CIVIL}}}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-phone-square"></i>  Telefonos</h6></div>
+  </div>  
+  <div class="row">    
+  <div class="col-xs-12 combo-input" id="datos_telefono">
+    {{{TELEFONOS}}}
+    <div class="form-group col-xs-6 entry">
+      <div class="col-md-5">
+        <label for="" class="control-label">Descripción</label>
+        <select name="telefono_numero[]" class="form-control">
+             <option value="">Seleccione</option>
+              {{{DETALLE_TEL}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/DETALLE_TEL}}}
+            </select>
+      </div>
+      <div class="col-md-7">
+        <label for="" class="control-label">Número</label>
+        <div class="input-group">
+          <input type="hidden" class="form-control" name="telefono_numero[]" value="{{{ID_TEL}}}">
+          <input type="number" class="form-control" name="telefono_numero[]" value="{{{NUMERO_TEL}}}">
+          <span class="input-group-btn">
+            <button title="Eliminar Número" class="btn btn-default btn-remove" type="button">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    {{{/TELEFONOS}}}
+    <div class="form-group col-xs-6 entry">
+      <div class="col-md-5">
+        <label for="" class="control-label">Descripción</label>
+        <select name="telefono_numero[]" class="form-control">
+             <option value="">Seleccione</option>
+              {{{DETALLE_TEL}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+              {{{/DETALLE_TEL}}}
+            </select>
+      </div>
+      <div class="col-md-7">
+        <label for="" class="control-label">Número</label>
+        <div class="input-group">
+          <input type="hidden" class="form-control" name="telefono_numero[]" value="0">
+          <input type="number" class="form-control" name="telefono_numero[]" value="">
+          <span class="input-group-btn">
+            <button title="Agregar Número" class="btn btn-info btn-add" type="button">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-home"></i>  Datos de Domicilio</h6></div>
+    <div class="col-xs-9 text-right">
+      <div class="btn-group botonera" data-toggle="buttons">
+
+          <button class="btn btn-info" id="domicilio_accion_alta" value="alta">Cambio de Domicilio</button>
+          <button class="btn btn-primary" id="domicilio_accion_modificar" value="modificar">Modificar Domicilio Actual</button>
+          <input type="hidden" value="modificar" id="domicilio_accion" name="domicilio_accion">
+      </div>
+    </div>
+  </div>
+<div id="datos_domicilio_personal">
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_provincia" class="control-label">Provincia <span class="required">*</span></label>
+        <select name="id_provincia" id="id_provincia" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PROVINCIA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/PROVINCIA}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_localidad" class="control-label">Localidad <span class="required">*</span></label>
+        <select name="id_localidad" id="id_localidad" class="form-control">
+          <option value="">Seleccione</option>
+          {{{LOCALIDAD}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/LOCALIDAD}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="cod_postal" class="control-label">Código Postal</label>
+        <input type="text" id="cod_postal" name="cod_postal" class="form-control" value="{{{COD_POSTAL}}}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="calle" class="control-label">Calle <span class="required">*</span></label>
+        <input type="text" id="calle" name="calle" class="form-control" value="{{{CALLE}}}">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="numero" class="control-label">Número <span class="required">*</span></label>
+        <input type="text" id="numero" name="numero" class="form-control" value="{{{NUMERO}}}">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="piso" class="control-label">Piso</label>
+        <input type="text" id="piso" name="piso" class="form-control" value="{{{PISO}}}">
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="depto" class="control-label">Depto</label>
+        <input type="text" id="depto" name="depto" class="form-control" value="{{{DEPTO}}}">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" id="gestionar_form" value="datos_personales" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/CAMPOS_ADMIN_RRHH}}}
+
+
+{{{SPAN_DATOS_PERSONALES}}}
+<div class="row subtitulo">
+  <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-user"></i> Datos</h6></div>
+</div>   
+
+<div class="row">
+  <div class="col-md-2">
+    <label class="control-label">Foto</label>
+    <div class="image-editor" id="image-editor">
+      <div class="form-group">
+          <div class="cropit-preview"></div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" name="foto_bd" id="foto_bd" value="{{{FOTO_PERSONA}}}">
+  <div class="col-md-10" >
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Nombre</label><br>
+        <span class="form-control" disabled>{{{NOMBRE}}}</span>
+      </div>
+      <div class="col-md-6">
+        <label class="control-label">Apellido</label><br>
+        <span class="form-control" disabled>{{{APELLIDO}}}</span>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Email</label><br>
+        <span class="form-control" disabled>{{{EMAIL}}}</span>
+      </div>
+      <div class="col-md-6">
+        <label class="control-label">CUIT/CUIL</label><br>
+        <span class="form-control" disabled>{{{CUIT}}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label class="control-label">Tipo</label><br>
+        <span class="form-control" disabled>{{{TIPO_DOCUMENTO}}}</span>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Documento</label><br>
+        <span class="form-control" disabled>{{{DOCUMENTO}}}</span>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Nacionalidad</label><br>
+        <span class="form-control" disabled>{{{NACIONALIDAD}}}</span>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label class="control-label">Fecha de Nacimiento</label><br>
+        <span class="form-control" disabled>{{{FECHA_NAC}}}</span>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Genero</label><br>
+        <span class="form-control" disabled>{{{GENERO}}}</span>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Estado Civil</label><br>
+        <span class="form-control" disabled>{{{ESTADO_CIVIL}}}</span>
+      </div>      
+    </div>    
+  </div>
+</div>
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-phone-square"></i>  Telefonos</h6></div>
+</div>  
+<div class="row">
+ <div class="col-xs-12">
+  {{{SPAN_TELEFONOS}}}
+  <div class="col-xs-6">
+    <div class="col-md-5">
+      <label class="control-label">Descripción</label>
+      <span class="form-control" disabled>{{{DETALLE_TEL}}}</span>
+    </div>
+    <div class="col-md-7">
+      <label class="control-label">Número</label>
+      <span class="form-control" disabled>{{{NUMERO_TEL}}}</span>
+    </div>
+  </div>
+  {{{/SPAN_TELEFONOS}}}
+</div>
+</div>
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-home" aria-hidden="true"></i>  Datos de Domicilio</h6></div>
+</div>  
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-4">
+    <label class="control-label">Provincia</label><br>
+    <span class="form-control" disabled>{{{PROVINCIA}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Localidad</label><br>
+    <span class="form-control" disabled>{{{LOCALIDAD}}}</span>
+  </div>
+  <div class="col-md-2">
+    <label class="control-label">Código Postal</label><br>
+    <span class="form-control" disabled>{{{COD_POSTAL}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label class="control-label">Calle</label><br>
+    <span class="form-control" disabled>{{{CALLE}}}</span>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label">Número</label><br>
+    <span class="form-control" disabled>{{{NUMERO}}}</span>
+  </div>
+  <div class="col-md-2">
+    <label class="control-label">Piso</label><br>
+    <span class="form-control" disabled>{{{PISO}}}</span>
+  </div>
+  <div class="col-md-2">
+    <label class="control-label">Departamento</label><br>
+    <span class="form-control" disabled>{{{DPTO}}}</span>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-right">
+      <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+    </div>
+  </div>
+</div>
+{{{ADJUNTAR_DOC}}}
+{{{/SPAN_DATOS_PERSONALES}}}

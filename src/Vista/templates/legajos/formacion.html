@@ -1,0 +1,510 @@
+{{{FORMACION}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off">
+	<div class="row subtitulo">
+		<div class="col-md-6 text-left"><h6 class="dom"><i class="fa fa-university" aria-hidden="true"></i>
+ Titulos Obtenidos.</h6></div> <div class="col-md-6 text-right"></div>
+	</div>	
+	<div class="combo-input" id="formacion_titulos">
+		{{{TITULOS}}}
+		<div class="row entry">
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="id_tipo_titulo" class="control-label">Nivel Educativo</label>
+					<select name="titulo[{{{TITULO_ID}}}][id_tipo_titulo]" id="id_tipo_titulo{{{TITULO_ID}}}" class="form-control tiptit">
+						<option value="">Seleccione</option>
+						{{{TIPO_TITULO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/TIPO_TITULO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="id_estado_titulo" class="control-label">Estado</label>
+					<select name="titulo[{{{TITULO_ID}}}][id_estado_titulo]" id="id_estado_titulo" class="form-control">
+						<option value="">Seleccione</option>
+						{{{ESTADO_TITULO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/ESTADO_TITULO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Título</label>
+					<select name="titulo[{{{TITULO_ID}}}][id_titulo]" id="id_titulo{{{TITULO_ID}}}" class="form-control activarSelect2">
+						<option value="">Seleccione</option>
+						{{{DESCRIPCION}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/DESCRIPCION}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="fecha" class="control-label">Otorgamiento</label>
+					<div class="input-group">
+						<input type="text" class="form-control fechaFormat" name="titulo[{{{TITULO_ID}}}][fecha]" id="fecha" value="{{{FECHA}}}">
+						<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 text-center">
+				<div class="form-group">
+					<p> &nbsp;</p>
+					<div class="funkyradio col-xs-1">
+						<span class="funkyradio-primary">
+							<input type="radio" id="titulo_checked_{{{TITULO_ID}}}" class="form-control" name="titulo_checked" value="{{{TITULO_ID}}}" {{{PRINCIPAL}}}>
+							<label for="titulo_checked_{{{TITULO_ID}}}" title="Marcar Título Considerado">&nbsp;</label>
+						</span>
+					</div>
+					<span style= "margin-right: 5%;" class="label label-info">{{{PORC}}}%</span>
+					<a href="{{{CREDITOS}}}" id=agregar_creditos title= "% de Creditos para promoción de grados" class="btn btn-default" > <span class="fa fa-percent"></span></a>
+					<button title="Eliminar Titulo" class="btn btn-default btn-remove" type="button">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		{{{/TITULOS}}}
+		<div class="row entry" data-new-id="0">
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="id_tipo_titulo" class="control-label">Nivel Educativo</label>
+					<select name="titulo[new][0][id_tipo_titulo]" id="id_tipo_titulo0" class="form-control tiptit">
+						<option value="">Seleccione</option>
+						{{{SELECT_TIPO_TITULO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/SELECT_TIPO_TITULO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="id_estado_titulo" class="control-label">Estado</label>
+					<select name="titulo[new][0][id_estado_titulo]" id="id_estado_titulo" class="form-control">
+						<option value="">Seleccione</option>
+						{{{SELECT_ESTADO_TITULO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/SELECT_ESTADO_TITULO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Título</label>
+					<select name="titulo[new][0][id_titulo]" id="id_titulo0" class="form-control activarSelect2">
+						<option value="">Seleccione</option>
+						{{{SELECT_DESCRIPCION}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/SELECT_DESCRIPCION}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Otorgamiento</label>
+					<div class="input-group">
+						<input type="text" class="form-control fechaFormat" name="titulo[new][0][fecha]" id="fecha" value="">
+						<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 text-center">
+				<div class="form-group">
+					<p> &nbsp;</p>
+					<div class="funkyradio col-xs-1">
+						<span class="funkyradio-primary">
+							<input type="radio" id="titulo_checked" class="form-control" name="titulo_checked" value="0">
+							<label for="titulo_checked" title="Marcar Título Considerado">&nbsp;</label>
+						</span>
+					</div>
+					<button title="Agregar Titulo" class="btn btn-info btn-add" type="button">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row subtitulo">
+		<div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Otros Estudios Realizados</h6></div>
+	</div>
+	<div class="row combo-input" id="formacion_otros_estudios">
+		{{{OTROS_ESTUDIOS}}}
+		<span class="entry">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Título</label>
+					<input type="text" class="form-control" name="otros_estudios[{{{OTRO_ESTUDIO_ID}}}][descripcion]" id="descripcion" value="{{{DESCRIPCION}}}">
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Fecha</label>
+					<div class="input-group">
+						<input type="text" class="form-control fechaFormat" name="otros_estudios[{{{OTRO_ESTUDIO_ID}}}][fecha]" id="fecha" value="{{{FECHA}}}">
+						<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="form-group">
+					<label for="descripcion" class="control-label"> &nbsp; </label>
+					<span class="input-group-btn">
+						<button title="Eliminar Estudio" class="btn btn-default btn-remove" type="button">
+							<span class="glyphicon glyphicon-minus"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</span>
+		{{{/OTROS_ESTUDIOS}}}
+		<span class="entry">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Título</label>
+					<input type="text" class="form-control" name="otros_estudios[new][][descripcion]" id="descripcion" value="">
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Fecha</label>
+					<div class="input-group">
+						<input type="text" class="form-control fechaFormat" name="otros_estudios[new][][fecha]" id="fecha" value="">
+						<span class="input-group-addon">
+							<span class="fa fa-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="form-group">
+					<label for="descripcion" class="control-label"> &nbsp; </label>
+					<span class="input-group-btn">
+						<button title="Agregar Estudio" class="btn btn-info btn-add" type="button">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</span>
+	</div>
+
+	<div class="row subtitulo">
+		<div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-tags" aria-hidden="true"></i> Conocimiento Específico de Sistemas/Software</h6></div>
+	</div>
+
+	<div class="row combo-input" id="formacion_otros_conocimientos">
+	{{{OTROS_CONOCIMIENTOS}}}
+		<span class="entry">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Descripcion</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="otros_conocimientos[{{{OTRO_CONOCIMIENTO_ID}}}][descripcion]" id="descripcion" value="{{{DESCRIPCION}}}">
+						<span class="input-group-btn">
+							<button title="Eliminar Conocimiento" class="btn btn-default btn-remove" type="button">
+								<span class="glyphicon glyphicon-minus"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</span>
+	{{{/OTROS_CONOCIMIENTOS}}}
+		<span class="entry">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Descripcion</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="otros_conocimientos[new][][descripcion]" id="descripcion" value="">
+						<span class="input-group-btn">
+							<button title="Agregar Conocimiento" class="btn btn-info btn-add" type="button">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</span>
+	</div>
+
+	<div class="row subtitulo">
+		<div class="col-md-6 text-left"><h6 class="dom"><i class="fa fa-certificate" aria-hidden="true"></i> Cursos Sistema Nacional de Capacitación</h6></div> 
+ 		<div class="col-md-6 text-right"></div>
+	</div>
+	<div class="form-group text-right">	
+		<button class="btn btn-info text-right" type="button" data-toggle="tooltip" data-placement="top" id="editar_campos" name="editar_campos" value="" title="Guardar">
+				Editar campos
+		</button>
+	</div>	
+	<div class="combo-input" id="formacion_cursos">
+		{{{CURSOS}}}
+		<div class="row entry">
+			<div class="col-md-1"></div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="nombre_curso" class="control-label">Codigo y Título del Curso</label>
+					<select name="empleado_cursos[{{{CURSOS_ID}}}][id_curso]" disabled id="nombre_curso" class="form-control habilitar activarSelect2">
+						<option value="">Seleccione</option>
+						{{{TITULO_CURSO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/TITULO_CURSO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="form-group">
+					<label for="creditos " class="control-label">Créditos</label>
+					<span class="form-control" disabled>{{{CREDITOS}}}</span>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="fecha" class="control-label">Fecha</label>
+					<div class="input-group">
+						<input type="text" disabled class="form-control fechaFormat habilitar" name="empleado_cursos[{{{CURSOS_ID}}}][fecha]" value="{{{FECHA}}}">
+						<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+					</div>
+				</div>
+			</div>	
+			<div class="col-md-2 text-center">
+				<div class="form-group">
+					<p> &nbsp;</p>
+					<div class="funkyradio col-xs-1">
+						<span class="funkyradio-primary">
+							<input disabled type="checkbox" id="empleado_cursos[{{{CURSOS_ID}}}][tipo_promocion]" class="form-control curso_check habilitar" name="empleado_cursos[{{{CURSOS_ID}}}][tipo_promocion]" value="{{{TIPO_PROMOCION}}}" {{{CHECKED}}}>
+							<label for="empleado_cursos[{{{CURSOS_ID}}}][tipo_promocion]" title="Aplica para promocíón de Tramo">&nbsp;</label>
+						</span>
+					</div>	
+					<button disabled title="Eliminar Curso" class="btn btn-default btn-remove habilitar" type="button">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		{{{/CURSOS}}}
+		<div class="row entry" data-new-id="0">
+			<div class="col-md-1"></div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="nombre_curso" class="control-label">Codigo y Título del Curso</label>
+					<select disabled name="empleado_cursos[new][0][id_curso]" id="nombre_curso0" class="form-control habilitar activarSelect2">
+						<option value="">Seleccione</option>
+						{{{SELECT_NOMBRE_CURSO}}}
+							<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+						{{{/SELECT_NOMBRE_CURSO}}}
+					</select>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Créditos</label>
+					<span class="form-control" disabled>{{{CREDITOS}}}</span>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Fecha</label>
+					<div class="input-group">
+						<input disabled type="text" class="form-control fechaFormat habilitar" name="empleado_cursos[new][0][fecha]" id="fecha" value="">
+						<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2 text-center">
+				<div class="form-group">
+					<p> &nbsp;</p>
+					<div class="funkyradio col-xs-1">
+						<span class="funkyradio-primary">
+							<input type="checkbox" disabled class="form-control curso_check habilitar" id="tipo_promocion0" name="empleado_cursos[new][0][tipo_promocion]" value="">
+							<label for="tipo_promocion0" title="Aplica para promoción de Tramo">&nbsp;</label>
+						</span>
+					</div>
+					<button title="Agregar Curso" disabled class="btn btn-info btn-add habilitar" type="button">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group text-right">
+				<input type="hidden" id="cant_cursos" value="{{{CANTIDAD_CURSOS}}}">
+				<a href="{{{HISTORIAL_CURSOS}}}" style="visibility: hidden;" id="boton_historial" class="btn btn-info">HISTORIAL</a>	
+				<button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="formacion" title="Guardar">
+				Guardar
+				</button>
+		        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+			</div>
+		</div>
+	</div>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/FORMACION}}}
+
+{{{SPAN_FORMACION}}}
+	<div class="row subtitulo">
+		<div class="col-md-6 text-left"><h6 class="dom"><i class="fa fa-university" aria-hidden="true"></i>
+ Titulos Obtenidos.</h6></div> <div class="col-md-6 text-right"></div>
+	</div>
+	{{{TITULOS}}}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label class="control-label">Nivel Educativo</label>
+				<span class="form-control" disabled>{{{TIPO_TITULO}}}</span>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label class="control-label">Estado</label>
+				<span class="form-control" disabled>{{{ESTADO_TITULO}}}</span>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label class="control-label">Título</label>
+				<span class="form-control span-textarea" disabled>{{{DESCRIPCION}}}</span>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label class="control-label">Otorgamiento</label>
+				<span class="form-control" disabled>{{{FECHA}}}</span>
+			</div>
+		</div>
+		<div class="col-md-1">
+			{{{PRINCIPAL}}}
+			<div class="form-group">
+				<p> &nbsp;</p>
+				<button type="button" title="Titulo Considerado" class="btn btn-primary btn-xs" disabled>
+					<span class="glyphicon glyphicon-ok"></span>
+				</button>
+			</div>
+			{{{/PRINCIPAL}}}
+		</div>
+	</div>
+	{{{/TITULOS}}}
+	{{{SIN_TITULOS}}}
+	<div class="row">
+    	<div class="col-md-12">
+      		<div class="alert alert-warning text-center"><i class="fa fa fa-comment" aria-hidden="true"></i> {{{MSJ}}}</div>
+    	</div>
+    </div>
+	{{{/SIN_TITULOS}}}
+	<div class="row subtitulo">
+		<div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Otros Estudios Realizados</h6></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1"></div>		
+		{{{OTROS_ESTUDIOS}}}
+		<span>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="control-label">Título</label>
+					<span class="form-control span-textarea" disabled>{{{DESCRIPCION}}}</span>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Fecha</label>
+					<span class="form-control" disabled>{{{FECHA}}}</span>
+				</div>
+			</div>
+		</span>
+		{{{/OTROS_ESTUDIOS}}}		
+		{{{SIN_ESTUDIOS}}}
+	    	<div class="col-md-12">
+	      		<div class="alert alert-warning text-center"><i class="fa fa fa-comment" aria-hidden="true"></i> {{{MSJ}}}</div>
+	    	</div>
+		{{{/SIN_ESTUDIOS}}}
+	</div>
+
+	<div class="row subtitulo">
+		<div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-tags" aria-hidden="true"></i> Conocimiento Específico de Sistemas/Software</h6></div>
+	</div>
+
+	<div class="row">
+	{{{OTROS_CONOCIMIENTOS}}}
+		<span>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="descripcion" class="control-label">Descripcion</label>
+					<span class="form-control span-textarea" disabled>{{{DESCRIPCION}}}</span>
+				</div>
+			</div>
+		</span>
+	{{{/OTROS_CONOCIMIENTOS}}}
+	{{{SIN_CONOCIMIENTOS}}}
+    	<div class="col-md-12">
+      		<div class="alert alert-warning text-center"><i class="fa fa fa-comment" aria-hidden="true"></i> {{{MSJ}}}</div>
+    	</div>
+	{{{/SIN_CONOCIMIENTOS}}}
+	</div>
+	<div class="row subtitulo">
+		<div class="col-md-6 text-left"><h6 class="dom"><i class="fa fa-university" aria-hidden="true"></i>Cursos Sistema Nacional de Capacitación</h6></div> <div class="col-md-6 text-right"></div>
+	</div>
+	{{{CURSOS}}}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="control-label">Título del Curso</label>
+				<span class="form-control" disabled>{{{TITULO_CURSO}}}</span>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label class="control-label">Créditos</label>
+				<span class="form-control" disabled>{{{CREDITOS}}}</span>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label class="control-label">Fecha</label>
+				<span class="form-control" disabled>{{{FECHA}}}</span>
+			</div>
+		</div>
+		<div class="col-md-1">
+		{{{TIPO_PROMOCION}}}
+			<div class="form-group">
+				<p> &nbsp;</p>
+				<button type="button" title="Aplica para promoción de Tramo" class="btn btn-primary btn-xs" disabled>
+					<span class="glyphicon glyphicon-ok"></span>
+				</button>
+			</div>
+		{{{/TIPO_PROMOCION}}}
+		</div>
+	</div>
+	{{{/CURSOS}}}
+	{{{SIN_CURSOS}}}
+	<div class="row">
+    	<div class="col-md-12">
+      		<div class="alert alert-warning text-center"><i class="fa fa fa-comment" aria-hidden="true"></i> {{{MSJ}}}</div>
+    	</div>
+    </div>
+	{{{/SIN_CURSOS}}}
+
+	
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+		  <div class="text-right">
+		    <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+		  </div>
+		</div>
+	</div>
+	{{{ADJUNTAR_DOC}}}
+{{{/SPAN_FORMACION}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

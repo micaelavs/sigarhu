@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<style>
+			table {font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;border-collapse: collapse;width: 100%;font-size:10px; }
+			td, th {border: 2px solid #dddddd;padding: 5px;}
+			tr:nth-child(even){box-sizing: border-box;}
+			.title{font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;}
+			.cell{padding: 1px;}
+			.cen{padding: 1px;text-align:center;}
+			@page { margin: 100px 25px;}
+		    .header {position: fixed;top: -60px;left: 0px;right: 0px;height: 50px;text-align left;line-height: 35px;border: 2px solid #DDDDDD;}
+		    .header img {padding:10px 0 0 10px }
+		    .footer { position: fixed; bottom: -60px; left: 0px; right: 0px; height: 55px;color: #000;line-height: 15px;text-align:left; border: 2px solid #DDDDDD;font-family: "Helvetica",sans-serif;border-collapse: collapse;width: 100%;font-size:10px;}
+		    .footer div {padding: 3px 0 0 15px}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src="{{{IMG_PATH}}}" height="30">
+		</div>
+		<div class="footer">
+			<div style="width: 100%" ><strong>Emitido desde:</strong> Sistema de Gestión de Administración de Recursos Humanos (SIGARHU)</div>
+			<div style="width: 100%"><strong>Solicitado por:</strong> {{{USUARIO}}}</div>
+			<div style="width: 100%"><strong>Fecha de emisión:</strong> {{{FECHA}}}</div>
+		</div>		
+		<div>
+			<h2 class="center title">{{{TITULO}}}</h2>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Nombre</th>
+						<th>CUIL</th>
+						<th>Fecha Designación</th>
+						<th>Fecha Publicación</th>
+						<th>Fecha Renuncia</th>
+						<th>Tipo </th>
+						<th>Fecha Presentación</th>
+						<th>Periodo</th>
+						<th>Nro Transacción</th>
+						<th>Nombre Puesto</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{{ROW}}}
+					<tr>
+						<td class="cen">{{{ORDEN}}}</td>
+						<td class="cell">{{{NOMBRE}}}</td>
+						<td class="cen">{{{CUIT}}}</td>
+						<td class="cen">{{{F_DES}}}</td>
+						<td class="cen">{{{F_PUB}}}</td>
+						<td class="cen">{{{F_RENUN}}}</td>
+						<td class="cen">{{{TIPO}}}</td>
+						<td class="cen">{{{F_PRES}}}</td>
+						<td class="cen">{{{PERIODO}}}</td>
+						<td class="cen">{{{TRANS}}}</td>
+						<td class="cen">{{{PUESTO}}}</td>
+					</tr>
+					{{{/ROW}}}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

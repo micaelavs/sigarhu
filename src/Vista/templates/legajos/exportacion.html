@@ -1,0 +1,152 @@
+<form action="{{{FORM}}}" method="post">
+  <div class="row" id="url-base" data_url='{{{URL_BASE}}}'></div>
+  <div class="row">
+      <a role="button" data-toggle="collapse" href="#collapseFiltros" aria-expanded="false" aria-controls="collapseFiltros"
+        style="display: block;">
+        <span class="">
+          <i class="fa fa-filter"></i> Filtros
+          <i class="fa fa-caret-right fa-fw" id="collapseFiltros_caret"></i>
+        </span>
+      </a>
+        <div class="row">
+             <div class="col-md-3" style="padding-left: 30px">
+              <div class="form-group">
+                <label for="estado" class="control-label">Estado: </label>
+                <select name="estado" id="estado" class="form-control">
+                  <option value="">Seleccione</option>
+                  {{{ESTADO}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/ESTADO}}}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="modalidad_contratacion" class="control-label">Modalidad de Vinculaci&oacute;n: </label>
+                <select name="modalidad_contratacion" id="modalidad_contratacion" class="form-control">
+                  <option value="">Seleccione</option>
+                  {{{MOD_CONTRATACION}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/MOD_CONTRATACION}}}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="situacion_revista" class="control-label">Situaci&oacute;n de Revista: </label>
+                <select name="situacion_revista" id="situacion_revista" class="form-control">
+                  <option value="">Seleccione</option>
+                  {{{SIT_REVISTA}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/SIT_REVISTA}}}
+                </select>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3" style="padding-left: 30px">
+              <label for="id_dependencia" class="control-label">Por Dependencia: </label>
+            </div>
+            <div class="col-md-3">
+              <label for="nivel" class="control-label">Por Niveles: </label>
+            </div>
+            <div class="col-md-3">
+              <label for="dependencias" class="control-label">Por Dependencias Subordinadas: </label>
+            </div>
+            <div class="col-md-1">
+                <label for="boton" class="control-label">...</label>
+            </div>
+          </div>
+
+          <span class="entry">
+          <div class="row" data-item="1" id="r1">
+            <div class="col-md-3" style="padding-left: 30px">
+              <div class="form-group">
+                <select name="id_dependencia[1]" id="id_dependencia" class="form-control dep_p">
+                  <option value="">Seleccione</option>
+                  {{{DEPENDENCIAS}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/DEPENDENCIAS}}}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <select multiple="true" name="nivel[1][]" id="nivel" class="form-control nvl">
+                  <option value="">Seleccione</option>
+                  {{{NIVELES}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/NIVELES}}}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <select multiple="1" name="dependencias[1][]" id="dependencias1" class="form-control dep">
+                  <option value="">Seleccione</option>
+                  {{{DEPENDENCIAS_HIJOS}}}
+                  <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                  {{{/DEPENDENCIAS_HIJOS}}}
+                </select>
+              </div> 
+            </div>
+            <div class="col-md-1">
+                  <div class="input-group-btn">
+                    <button title="Agregar Criterios de busqueda." class="btn btn-info btn-add" type="button">
+                      <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                  </div>
+            </div>
+          </div>
+          </span>
+  </div>
+  <div class="row"  style="padding-left:15px;padding-right: 15px ">
+    <div class="col-md-12 alert alert-warning">
+      <strong><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Nota:  </strong>
+      <ul>
+        <li>Con la selección  <strong>"Por Dependencias" </strong> se hará un filtro particular de todos los agentes directos a la dependencia.</li>
+        <li>Con la seleción  <strong>"Por Niveles" </strong> sumada, el filtro será general y abarcará a todos los agentes que pertenecen a las dependencias con los niveles seleccioneados y subordinadas a la dependencia seleccionada.</li>
+        <li>Con la seleción  <strong>"Por Dependencias Subordinadas" </strong> sumada, se hará un filtro particular de todos los agentes directos a las dependencias elegidas.</li>
+        <li> Haciendo click en <strong>"+" </strong> creará una nueva fila de filtro cuyo criterios se sumaran a la anterior , podra crear tantas como sean necesarias para obtener el universo de agentes deseado.</li>
+      </ul>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-md-12 subtitulo_max">
+      <strong><i class="fa fa-download" aria-hidden="true"></i> Campos a Exportar</strong> 
+    </div>  
+  </div>
+  {{{CAMPOS}}}
+  <div class="row">
+    <div class="col-md-12 subtitulo_min">
+      <label class="checkbox-inline">
+          <input type="checkbox" name="select_all" value="{{{BLOCK}}}" checked="checked"><i class="fa {{{ICONO}}}" aria-hidden="true"></i>  {{{BLOCK}}}
+      </label>
+    </div>
+  </div>
+  <div class="row">        
+    <div class="col-md-12" id="{{{DIV_ID}}}">
+      {{{CAMPO}}}
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="campos_exportar" name="campos_exportar[{{{VALUE}}}]" value="{{{VALUE}}}" checked="checked"> {{{TEXT}}}
+        </label>
+      </div>
+      {{{/CAMPO}}}
+    </div>
+  </div>
+  <br>
+  {{{/CAMPOS}}}
+
+  <div class="row">    
+    <div class="col-md-12 text-right">
+      {{{BOTON_EXPORTAR}}}
+      <button id="accion_exportadora" class="btn {{{CLASS}}}" value="{{{FORM}}}">{{{NOMBRE}}}<span class="fa fa-fw fa-file-excel-o"></span></button>
+      {{{/BOTON_EXPORTAR}}}
+      {{{VOLVER}}}
+      <a href="{{{HREF}}}" class="btn {{{CLASS}}}">{{{NOMBRE}}}</a>
+      {{{/VOLVER}}}      
+    </div> 
+  </div> 
+</form>

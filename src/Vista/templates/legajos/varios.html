@@ -1,0 +1,271 @@
+{{{CAMPOS_VARIOS}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off" id="form">
+  {{{CAMPO_CREDENCIAL}}}
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-credit-card"></i>  Posee Credencial de acceso</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>    
+    <div class="col-md-4">
+      <div id="cred" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="credencial" id="credencial" value="1" {{{CHECKED}}}>
+          <label for="credencial"  data-toggle="tooltip" >Tiene Credencial</label>
+       </div>
+      </div>
+    </div>
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="fecha_vencimiento" class="control-label">Fecha de Vencimiento</label>
+			<div class="input-group date">
+				<input type="text" class="form-control fecha2" id="fecha_vencimiento" name="fecha_vencimiento" value="{{{FECHA_VENCIMIENTO}}}">
+				<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+			</div>
+		</div>
+	</div>
+  </div>
+  {{{/CAMPO_CREDENCIAL}}}
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-wheelchair"></i>  Datos de Discapacidad</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Tipo</label>
+        <select name="tipo_discapacidad" id="tipo_discapacidad" class="form-control">
+           <option value="">Seleccione</option>
+          {{{TIPO_DISCAPACIDAD}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TIPO_DISCAPACIDAD}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="" class="control-label">CUD</label>
+       <input type='text' class="form-control" id="cud" name="cud" value="{{{CUD}}}">
+      </div>
+    </div>
+    <div class="col-md-3">
+		<div class="form-group">
+			<label for="fecha_vencimiento_cud" class="control-label">Fecha de Vencimiento</label>
+			<div class="input-group date">
+				<input type="text" class="form-control fecha2" id="fecha_vencimiento_cud" name="fecha_vencimiento_cud" value="{{{FECHA_VENCIMIENTO_CUD}}}">
+				<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>  
+    <div class="col-md-8">
+      <label for="" class="control-label">Observaciones</label>
+        <textarea class="form-control custom-control" rows= "2" id="observaciones" name="observaciones">{{{OBSERVACIONES}}}</textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-child"></i>  Datos de Sindicato</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <label for="" class="control-label">Sindicato</label>
+      <div class="input-group">
+        <select class="form-control" id="sindicato" tabindex="16" name="sindicato[]" multiple>
+          {{{SINDICATO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SINDICATO}}}
+        </select>
+        <span class="input-group-btn">
+          <button title="Agrega Sindicato si no esta en la lista. " class="btn btn-info" type="button" id="btn_sindicato">Otro</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="div_otro_sindicato">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <label for="" class="control-label">Nuevo Sindicato</label>
+      <input type="text" name="otro_sindicato" id="otro_sindicato" class="form-control" value="{{{OTRO_SINDICATO}}}">
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-heartbeat"></i> Obra Social y Seguro de Vida</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Obra Social</label>
+        <select name="obra_social" id="obra_social" class="form-control">
+           <option value="">Seleccione</option>
+          {{{OBRA_SOCIAL}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/OBRA_SOCIAL}}}
+        </select>
+      </div>
+    </div>    
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="" class="control-label">Seguro De Vida</label>
+        <select name="seguro_vida[]" id="seguro_vida" class="form-control" multiple="true">
+           <option value="">Seleccione</option>
+          {{{SEGUROS_VIDA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SEGUROS_VIDA}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-plane"></i>  Veterano de Guerra</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div id="cred" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="veterano_guerra" id="veterano_guerra" value="1" {{{VETERANO}}}>
+          <label for="veterano_guerra"  data-toggle="tooltip" >Veterano de Guerra</label>
+       </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="varios" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/CAMPOS_VARIOS}}}
+{{{SPAN_VARIOS}}}
+{{{CAMPO_CREDENCIAL}}} 
+ <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-credit-card"></i>  Posee Credencial de acceso</h6></div>
+</div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+    <label class="control-label">Credencial</label>
+    <span class="form-control" disabled>{{{CREDENCIAL}}}</span>
+  </div>
+  <div class="col-md-4">
+		<div class="form-group">
+			<label for="fecha_vencimiento" class="control-label">Fecha de Vencimiento</label>
+			<div class="input-group date">
+				<span class="form-control" disabled>{{{FECHA_VENCIMIENTO}}}</span>
+				<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+			</div>
+		</div>
+	</div>
+</div>
+{{{/CAMPO_CREDENCIAL}}}
+<br>
+ <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-wheelchair"></i>  Datos de Discapacidad</h6></div>
+  </div>
+  <div class="row" >
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <label class="control-label">Tipo de Discapacidad</label>
+      <span class="form-control" disabled>{{{TIPO_DISCAPACIDAD}}}</span>
+    </div>
+    <div class="col-md-3">
+      <label class="control-label">CUD</label>
+      <span class="form-control" disabled>{{{CUD}}}</span>
+    </div>
+    <div class="col-md-3">
+		<div class="form-group">
+			<label for="fecha_vencimiento_cud" class="control-label">Fecha de Vencimiento</label>
+			<div class="input-group date">
+				<span class="form-control" disabled>{{{FECHA_VENCIMIENTO_CUD}}}</span>
+				<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+			</div>
+		</div>
+	</div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-2"></div>    
+    <div class="col-md-8">
+      <label class="control-label">Observaciones</label>
+      <textarea class="form-control" disabled>{{{OBSERVACIONES}}}</textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-child"></i>  Datos de Sindicato</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="form-group">
+        <label class="control-label">Sindicato(s)</label>
+        <span class="form-control" disabled>{{{SINDICATOS}}}</span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-heartbeat"></i> Obra Social y Seguro de Vida</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>    
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label">Obra Social</label>
+        <span class="form-control" disabled>{{{OBRA_SOCIAL}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label">Seguro de Vida</label>
+        <span class="form-control" disabled>{{{SEGUROS_VIDA}}}</span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-plane"></i>  Veterano de Guerra</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label">Veterano de Guerra</label>
+        <span class="form-control" disabled>{{{VETERANO}}}</span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>  
+  {{{ADJUNTAR_DOC}}}
+{{{/SPAN_VARIOS}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

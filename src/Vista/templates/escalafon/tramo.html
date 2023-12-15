@@ -1,0 +1,40 @@
+<form id="{{{FORM}}}" method='POST' action="" autocomplete="off">
+  <div class="row"  id="url-base" data_url='{{{URL_BASE}}}'>
+</div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2 form-group">
+      <label class="control-label">Modalidad de Vinculación<span class="required"> *</span></label>
+      <select class="form-control" id="id_modalidad_vinculacion" name="id_modalidad_vinculacion">
+        <option value=""> Seleccione </option>
+         {{{MOD_VINCULACION}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+         {{{/MOD_VINCULACION}}}
+      </select>
+    </div>
+    <div class="col-md-5 form-group">
+      <label class="control-label">Situación de Revista<span class="required"> *</span></label>
+      <select class="form-control" id="id_situacion_revista" name="id_situacion_revista">
+         {{{SIT_REVISTA}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+         {{{/SIT_REVISTA}}}
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+      <div class="form-group">
+        <label class="control-label" for="nombre">Tramo <span class="required">*</span></label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_tramo" value="{{{OPERACION}}}" id='boton_tramo' title="Guardar">{{{BOTON}}}</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

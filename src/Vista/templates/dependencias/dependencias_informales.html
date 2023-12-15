@@ -1,0 +1,30 @@
+<div class="row"  id="url-base" data_url='{{{URL_BASE}}}'>
+  <div class="col-md-12  text-left alert alert-warning">  
+    <span>
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <strong>Nota:</strong> Para crear nuevas <strong>"Dependencias Infornales"</strong>, primero debe seleccionar una <strong>"Dependecia Padre"</strong>.
+    </span>
+  </div>  
+</div>
+<div class="row">
+<div class="col-md-6 form-group">
+  <label class="control-label" for="id_dependencia">Dependencia <span class="text-danger"> *</span></label>
+  <select class="form-control" id="id_dependencia" name="id_dependencia" >
+    <option value=""> Seleccione </option>
+     {{{ID_DEPENDENCIA}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     {{{/ID_DEPENDENCIA}}}
+  </select>
+</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-12">
+		<table id="dependencias_informales" class="table table-striped dataTables" width="100%"></table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12 text-right">
+		<button class="btn btn-primary" id= "boton_nuevo" data-href="{{{LINK}}}">NUEVO</button> 
+	</div>
+</div>

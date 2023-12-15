@@ -1,0 +1,324 @@
+{{{CAMPOS_FAMILIAR}}}
+<div class='row'>
+  <div class='col-xs-12 text-right'>
+    <div id='div_agente'>
+      <i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+      Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong>
+    </div>
+  </div>
+</div>
+<form action="{{{FORM}}}" method="POST" autocomplete="off" id="alta_grupo_familiar">
+  <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-users"></i>  Datos del Familiar </h6></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="" class="control-label">Parentesco <span class="required">*</span></label>
+        {{{C_PARENTESCO}}}
+        <select name="parentesco" id="parentesco" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PARENTESCO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+        {{{/PARENTESCO}}}
+        </select>
+        {{{/C_PARENTESCO}}}
+        {{{SPAN_PARENTESCO}}}
+        <input type="hidden" name="parentesco" id="parentesco" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_PARENTESCO}}}
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="nombre" class="control-label">Nombre <span class="required">*</span></label>
+      {{{C_NOMBRE}}}
+      <input type='text' class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">    
+      {{{/C_NOMBRE}}}
+      {{{SPAN_NOMBRE}}}
+      <input type="hidden" name="nombre" id="nombre" value="{{{VALUE}}}">
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_NOMBRE}}}
+    </div>
+    <div class="col-md-3">
+      <label for="apellido" class="control-label">Apellido <span class="required">*</span></label>
+      {{{C_APELLIDO}}}
+      <input type='text' class="form-control" id="apellido" name="apellido" value="{{{APELLIDO}}}">   
+      {{{/C_APELLIDO}}}
+      {{{SPAN_APELLIDO}}}
+      <input type="hidden" name="apellido" id="apellido" value="{{{VALUE}}}">
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_APELLIDO}}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>    
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="fecha_nacimiento" class="control-label">Fecha de Nacimiento</label>
+        {{{C_FECHA_NAC}}}
+        <div class="input-group date">
+          <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="{{{FECHA_NACIMIENTO}}}">
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+        {{{/C_FECHA_NAC}}}
+        {{{SPAN_FECHA_NAC}}}
+        <input type="hidden" name="fecha_nacimiento" id="fecha_nacimiento" value="{{{VALUE}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_FECHA_NAC}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="tipo_documento" class="control-label">Tipo de Documento <span class="required">*</span></label>
+        {{{C_TDOCUMENTO}}}
+        <select name="tipo_documento" id="tipo_documento" name="tipo_documento" class="form-control">
+         <option value="">Seleccione</option>
+          {{{TIPO_DOCUMENTO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TIPO_DOCUMENTO}}}
+        </select>
+        {{{/C_TDOCUMENTO}}}
+        {{{SPAN_TDOCUMENTO}}}
+        <input type="hidden" name="tipo_documento" id="tipo_documento" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_TDOCUMENTO}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="documento" class="control-label">Documento <span class="required">*</span></label>
+        {{{C_DOCUMENTO}}}
+        <input type="text" id="documento" name="documento" class="form-control" value="{{{DOCUMENTO}}}">
+        {{{/C_DOCUMENTO}}}
+        {{{SPAN_DOCUMENTO}}}
+        <input type="hidden" id="documento" name="documento" class="form-control" value="{{{VALUE}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_DOCUMENTO}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="nacionalidad" class="control-label">Nacionalidad</label>
+        {{{C_NACIONALIDAD}}}
+        <select name="nacionalidad" id="nacionalidad" class="form-control">
+          <option value="">Seleccione</option>
+          {{{NACIONALIDAD}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/NACIONALIDAD}}}
+        </select>
+        {{{/C_NACIONALIDAD}}}
+        {{{SPAN_NACIONALIDAD}}}
+        <input type="hidden" id="nacionalidad" name="nacionalidad" class="form-control" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        {{{/SPAN_NACIONALIDAD}}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>    
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="nivel_educativo" class="control-label">Nivel de Estudio</label>
+        {{{C_NIVEL_EDUCATIVO}}}
+        <select name="nivel_educativo" id="nivel_educativo" class="form-control">
+          <option value="">Seleccione</option>
+          {{{NIVEL_EDUCATIVO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/NIVEL_EDUCATIVO}}}
+        </select>
+        {{{/C_NIVEL_EDUCATIVO}}}
+        {{{SPAN_NIVEL_EDUCATIVO}}}
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+        <input type="hidden" id="nivel_educativo" name="nivel_educativo" class="form-control" value="{{{ID}}}">
+        {{{/SPAN_NIVEL_EDUCATIVO}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="" class="control-label">% que Desgrava AFIP</label>
+        {{{C_DESGRAVA_AFIP}}}
+        <select name="desgrava_afip" id="desgrava_afip" class="form-control">
+          <option value="">Seleccione</option>
+          {{{DESGRAVA_AFIP}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/DESGRAVA_AFIP}}}
+        </select>
+        {{{/C_DESGRAVA_AFIP}}}
+        {{{SPAN_DESGRAVA_AFIP}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type="hidden" id="desgrava_afip" name="desgrava_afip" class="form-control" value="{{{ID}}}">
+        {{{/SPAN_DESGRAVA_AFIP}}}
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="fecha_desde" class="control-label">Fecha Desde <span class="required">*</span></label>
+        {{{C_FECHA_DESDE}}}
+        <div class="input-group date">
+          <input type="text" class="form-control fecha" id="fecha_desde" name="fecha_desde" value="{{{FECHA_DESDE}}}">
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+        {{{/C_FECHA_DESDE}}}
+        {{{SPAN_FECHA_DESDE}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type="hidden" class="form-control" id="fecha_desde" name="fecha_desde" value="{{{VALUE}}}">
+        {{{/SPAN_FECHA_DESDE}}}
+      </div>
+    </div>
+{{{BLOCK_FECHA_HASTA}}}
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="fecha_hasta" class="control-label">Fecha Hasta</label>
+        {{{C_FECHA_HASTA}}}
+        <div class="input-group date">
+          <input type="text" class="form-control fecha" id="fecha_hasta" name="fecha_hasta" value="{{{FECHA_HASTA}}}">
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+        {{{/C_FECHA_HASTA}}}
+        {{{SPAN_FECHA_HASTA}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type="hidden" class="form-control" id="fecha_hasta" name="fecha_hasta" value="{{{VALUE}}}">
+        {{{/SPAN_FECHA_HASTA}}}
+      </div>
+    </div>
+{{{/BLOCK_FECHA_HASTA}}}     
+  </div>
+  
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      {{{C_GUARDERIA}}}
+      <div id="r_guarderia" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="reintegro_guarderia" id="reintegro_guarderia" value="1" {{{REINTEGRO_GUARDERIA}}}>
+          <label for="reintegro_guarderia"  data-toggle="tooltip" >Reintegro Guardería</label>
+       </div>
+      </div>
+      {{{/C_GUARDERIA}}}
+      {{{SPAN_GUARDERIA}}}
+      <label for="reintegro_guarderia" class="control-label">Reintegro Guardería</label>
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+      <input class="form-control" type="hidden" name="reintegro_guarderia" id="reintegro_guarderia" value="{{{ID}}}">
+      {{{/SPAN_GUARDERIA}}}
+    </div>
+    <div class="col-md-3">
+      {{{C_DISCAPACIDAD}}}
+      <div id="disc" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="discapacidad" id="discapacidad" value="1" {{{DISCAPACIDAD}}}>
+          <label for="discapacidad"  data-toggle="tooltip" >Tiene discapacidad</label>
+       </div>
+      </div>
+      {{{/C_DISCAPACIDAD}}}
+      {{{SPAN_DISCAPACIDAD}}}
+      <label for="reintegro_guarderia" class="control-label">Posee Discapacidad</label>
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+      <input class="form-control" type="hidden" name="discapacidad" id="discapacidad" value="{{{ID}}}">
+      {{{/SPAN_DISCAPACIDAD}}}
+    </div>
+  </div>
+
+  <br>
+  <div id="botones_disca">
+    <div class="row subtitulo">
+      <div class="col-xs-6 text-left">
+        <h6 class="dom">
+          <i class="fa fa-wheelchair"></i>  Datos de Discapacidad
+        </h6>
+      </div>
+      <div class="col-xs-6 text-right">
+        <div class="btn-group botonera" data-toggle="buttons">
+            <button class="btn btn-info" id="dis_accion_alta" value="alta">Cambio Discapacidad</button>
+            <button class="btn btn-primary" id="dis_accion_modificar" value="modificar">Modificar Discapacidad</button>
+            <input type="hidden" value="" id="dis_familiar_accion" name="dis_familiar_accion">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="div_discapacidad">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="" class="control-label">Tipo</label>
+          {{{C_TDISCAPACIDAD}}}
+          <select name="tipo_discapacidad" id="tipo_discapacidad" class="form-control" disabled="1">
+             <option value="">Seleccione</option>
+            {{{TIPO_DISCAPACIDAD}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/TIPO_DISCAPACIDAD}}}
+          </select>
+          {{{/C_TDISCAPACIDAD}}}
+          {{{SPAN_TDISCAPACIDAD}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type="hidden" class="form-control" name="tipo_discapacidad" id="tipo_discapacidad" value="{{{ID}}}">
+          {{{/SPAN_TDISCAPACIDAD}}}
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="" class="control-label">CUD</label>
+          {{{C_CUD}}}
+          <input type='text' class="form-control" id="cud" name="cud" value="{{{CUD}}}">
+          {{{/C_CUD}}}
+          {{{SPAN_CUD}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type='hidden' class="form-control" id="cud" name="cud" value="{{{VALUE}}}">
+          {{{/SPAN_CUD}}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="fecha_alta_discapacidad" class="control-label">Fecha Alta Discapacidad</label>
+          {{{C_FECHA_ALTA_DIS}}}
+          <div class="input-group date">
+            <input type="text" class="form-control fecha" id="fecha_alta_discapacidad" name="fecha_alta_discapacidad" value="{{{FECHA_ALTA_DIS}}}" disabled="">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>
+          {{{/C_FECHA_ALTA_DIS}}}
+          {{{SPAN_C_FECHA_ALTA_DIS}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type='hidden' class="form-control" id="fecha_alta_discapacidad" name="fecha_alta_discapacidad" value="{{{VALUE}}}">
+          {{{/SPAN_C_FECHA_ALTA_DIS}}}
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="fecha_vencimiento" class="control-label">Fecha de Vencimiento</label>
+          {{{C_FECHA_VEN_DIS}}}
+          <div class="input-group date">
+            <input type="text" class="form-control fecha" id="fecha_vencimiento" name="fecha_vencimiento" value="{{{FECHA_VEN_DIS}}}" disabled="disabled">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>
+          {{{/C_FECHA_VEN_DIS}}}
+          {{{SPAN_C_FECHA_VEN_DIS}}}
+          <span class="form-control" disabled>{{{VALUE}}}</span>
+          <input type='hidden' class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" value="{{{VALUE}}}">
+          {{{/SPAN_C_FECHA_VEN_DIS}}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <input type="hidden" name="tipo_form" value="{{{TIPO_FORM}}}">
+        <button class="btn btn-primary" type="submit">
+            {{{BOTON_SUBMIT}}}
+        </button>
+        <a href="#" data-ref="{{{VOLVER}}}" data-bloque="{{{BLOQUE}}}" class="btn btn-default volver_legajo">VOLVER</a>
+      </div>
+    </div>
+  </div>
+
+</form>
+{{{/CAMPOS_FAMILIAR}}}

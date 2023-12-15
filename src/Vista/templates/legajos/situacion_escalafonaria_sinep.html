@@ -1,0 +1,207 @@
+  <div class="row" id="tipo" data-tipo="1">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_modalidad_vinculacion" class="control-label">Modalidad de Vinculación</label>
+  {{{MODALIDAD_VINCULACION}}}        
+        <select name="id_modalidad_vinculacion" id="id_modalidad_vinculacion" class="form-control">
+          <option value="">Seleccione</option>
+          {{{MODALIDADES_VINCULACION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/MODALIDADES_VINCULACION}}}
+        </select>
+  {{{/MODALIDAD_VINCULACION}}}
+  {{{SPAN_MODALIDAD_VINCULACION}}}
+  		<input type="hidden" name="id_modalidad_vinculacion" id="id_modalidad_vinculacion" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_MODALIDAD_VINCULACION}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_situacion_revista" class="control-label">Situación de Revista</label>
+  {{{SITUACION_REVISTA}}}
+        <select name="id_situacion_revista" id="id_situacion_revista" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SITUACIONES_REVISTA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SITUACIONES_REVISTA}}}
+        </select>
+  {{{/SITUACION_REVISTA}}}
+  {{{SPAN_SITUACION_REVISTA}}}
+  		<input type="hidden" name="id_situacion_revista" id="id_situacion_revista" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_SITUACION_REVISTA}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_funcion_ejecutiva" class="control-label">Función Ejecutiva</label>
+  {{{FUNCION_EJECUTIVA}}}
+        <select name="id_funcion_ejecutiva" id="id_funcion_ejecutiva" class="form-control">
+          <option value="">Seleccione</option>
+          {{{FUNCIONES_EJECUTIVAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/FUNCIONES_EJECUTIVAS}}}
+        </select>
+  {{{/FUNCION_EJECUTIVA}}}
+  {{{SPAN_FUNCION_EJECUTIVA}}}
+  		<input type="hidden" name="id_funcion_ejecutiva" id="id_funcion_ejecutiva" value="{{{ID}}}">
+        <span class="form-control" id="id_func_ejecutiva"  disabled>{{{VALUE}}}</span>
+  {{{/SPAN_FUNCION_EJECUTIVA}}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+    	<div class="form-group">
+        <label for="id_agrupamiento" class="control-label">Agrupamiento</label>
+  {{{AGRUPAMIENTO}}}
+        <select name="id_agrupamiento" id="id_agrupamiento" class="form-control">
+          <option value="">Seleccione</option>
+          {{{AGRUPAMIENTOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/AGRUPAMIENTOS}}}
+        </select>
+  {{{/AGRUPAMIENTO}}}
+  {{{SPAN_AGRUPAMIENTO}}}
+  		<input type="hidden" name="id_agrupamiento" id="id_agrupamiento" value="{{{ID}}}">
+        <span class="form-control" id="id_agrup"  disabled>{{{VALUE}}}</span>
+  {{{/SPAN_AGRUPAMIENTO}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_nivel" class="control-label">Función o Nivel</label>
+  {{{NIVEL}}}
+        <select name="id_nivel" id="id_nivel" class="form-control">
+          <option value="">Seleccione</option>
+          {{{NIVELES}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/NIVELES}}}
+        </select>
+  {{{/NIVEL}}}
+  {{{SPAN_NIVEL}}}
+  		<input type="hidden" name="id_nivel" id="id_nivel" value="{{{ID}}}">
+        <span class="form-control" id = "nivel_spn" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_NIVEL}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="compensacion_geografica" class="control-label">Compensación por Zona Geográfica</label>
+  {{{COMPENSACION_GEOGRAFICA}}}
+        <div class="input-group">
+          <input type="text" id="compensacion_geografica" name="compensacion_geografica" class="form-control" value="{{{VALUE}}}">
+          <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+          </div>
+  {{{/COMPENSACION_GEOGRAFICA}}}
+  {{{SPAN_COMPENSACION_GEOGRAFICA}}}
+  		<input type="hidden" name="compensacion_geografica" id="compensacion_geografica" value="{{{VALUE}}}">
+        <span class="form-control" id="comp_geografica"  disabled>{{{VALUE}}}</span>
+  {{{/SPAN_COMPENSACION_GEOGRAFICA}}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-md-4">
+      <div class="form-group">
+        <label for="id_tramo" class="control-label">Tramo</label>
+  {{{TRAMO}}}
+        <select name="id_tramo" id="id_tramo" class="form-control">
+          <option value="">Seleccione</option>
+          {{{TRAMOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TRAMOS}}}
+        </select>
+  {{{/TRAMO}}}
+  {{{SPAN_TRAMO}}}
+  		<input type="hidden" name="id_tramo" id="id_tramo" value="{{{ID}}}">
+        <span class="form-control" id="tramo" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_TRAMO}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_grado" class="control-label">Grado Emision Contrato</label>
+  {{{GRADO}}}
+        <select name="id_grado" id="id_grado" class="form-control">
+          <option value="">Seleccione</option>
+          {{{GRADOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/GRADOS}}}
+        </select>
+  {{{/GRADO}}}
+  {{{SPAN_GRADO}}}
+  		<input type="hidden" name="id_grado" id="id_grado" value="{{{ID}}}">
+        <span class="form-control" id="grado" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_GRADO}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_grado_liquidacion" class="control-label">Grado Liquidacion</label>
+  {{{GRADO_LIQUIDACION}}}
+        <select name="id_grado_liquidacion" id="id_grado_liquidacion" class="form-control">
+          <option value="">Seleccione</option>
+          {{{GRADOS_LIQUIDACION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/GRADOS_LIQUIDACION}}}
+        </select>
+  {{{/GRADO_LIQUIDACION}}}
+  {{{SPAN_GRADO_LIQUIDACION}}}
+  		<input type="hidden" name="id_grado_liquidacion" id="id_grado_liquidacion" value="{{{ID}}}">
+        <span class="form-control" id="grado_liquidacion" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_GRADO_LIQUIDACION}}}
+      </div>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="compensacion_transitoria" class="control-label">Compensación Transitoria</label>
+  {{{COMPENSACION_TRANSITORIA}}}
+        <div class="input-group">
+          <input type="text" id="compensacion_transitoria" name="compensacion_transitoria" class="form-control" value="{{{VALUE}}}">
+          <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+        </div>  
+  {{{/COMPENSACION_TRANSITORIA}}}
+  {{{SPAN_COMPENSACION_TRANSITORIA}}}
+  		<input type="hidden" name="compensacion_transitoria" id="compensacion_transitoria" value="{{{VALUE}}}">
+        <span class="form-control" id="comp_transitoria" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_COMPENSACION_TRANSITORIA}}}
+      </div>
+    </div>
+  
+  
+    <div class="col-md-4">
+      <div class="form-group">
+      <label for="cambio_nivel" class="control-label">Último cambio de nivel</label>
+  {{{ULTIMO_CAMBIO_NIVEL}}}
+      <div class='input-group date' id="nivel">
+        <input type='text' class="form-control fecha " id="cambio_nivel" name="cambio_nivel" value="{{{CAMBIO_NIVEL}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+    </div> 
+   {{{/ULTIMO_CAMBIO_NIVEL}}} 
+   {{{SPAN_ULTIMO_CAMBIO_NIVEL}}}
+      <input type="hidden" name="cambio_nivel" id="cambio_nivel" value="{{{VALUE}}}">
+      <span class="form-control" id="cambio_nivel_spn" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_ULTIMO_CAMBIO_NIVEL}}}    
+      </div>    
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+      <label for="cambio_grado" class="control-label">Último cambio de grado</label>
+  {{{ULTIMO_CAMBIO_GRADO}}}
+      <div class='input-group date' id="nivel">
+        <input type='text' class="form-control fecha " id="cambio_nivel" name="cambio_grado" value="{{{CAMBIO_GRADO}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+    </div>
+   {{{/ULTIMO_CAMBIO_GRADO}}}
+   {{{SPAN_ULTIMO_CAMBIO_GRADO}}}
+      <input type="hidden" name="cambio_grado" id="cambio_grado" value="{{{VALUE}}}">
+      <span class="form-control" id="cambio_grado_spn" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_ULTIMO_CAMBIO_GRADO}}}
+      </div>
+    </div>
+  </div>

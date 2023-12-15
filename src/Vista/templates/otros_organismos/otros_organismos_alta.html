@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <label class="float-md-right control-label"><p><i>Campos requeridos(*)</i></p></label>
+    </div>
+</div>
+
+
+
+<form id="{{{FORM}}}" method='POST' action="">
+
+        <div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label"for="nombre">Nombre<span class="text-danger">*</span></label>
+					<input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label"for="tipo">Tipo<span class="text-danger">*</span></label>
+					  <select class="form-control" id="tipo" name="tipo" >
+					    <option value=""> Seleccione </option>
+					     {{{TIPO}}}
+					        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+					     {{{/TIPO}}}
+					  </select>
+				</div>
+			</div>
+		</div>
+		<div class="row row_jurisdiccion">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label"for="jurisdiccion">Jurisdicción<span class="text-danger">*</span></label>
+					  <select class="form-control" id="jurisdiccion" name="jurisdiccion" >
+					    <option value=""> Seleccione </option>
+					     {{{JURISDICCION}}}
+					        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+					     {{{/JURISDICCION}}}
+					  </select>
+				</div>
+			</div>
+		</div>
+ {{{INPUT_HIDDEN}}}
+    <input name="return" type="hidden" value="{{{VALUE}}}">
+ {{{/INPUT_HIDDEN}}}		
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-right">
+            <button type="submit" class="btn btn-primary" data-placement="left" name="otros_organismos" value="{{{OPERACION}}}" id='otros_organismos' title="Guardar">GUARDAR</button>
+            <a href="{{{CANCELAR}}}" id="volver" class="btn btn-default" >CANCELAR</a>
+        </div>
+    </div>
+</form>

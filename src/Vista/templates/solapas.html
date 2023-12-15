@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+	<div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+	<div class="wrapper">
+		<ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
+{{{TAB}}}
+  <li class="nav-item{{{ACTIVO_LINK}}}">
+    <a class="nav-link{{{ACTIVE}}}" id="pills-{{{NOMBRE_TAB}}}-tab" data-tab="{{{TITULO_TAB}}}" data-toggle="pill"  data-id="{{{ID_BLOQUE}}}" href="#pills-{{{NOMBRE_TAB}}}" role="tab" aria-controls="pills-{{{NOMBRE_TAB}}}" aria-selected="{{{SELECTED}}}">{{{TITULO_TAB}}}</a>
+  </li>
+{{{/TAB}}}  
+		</ul>
+	</div>
+	<div class="tab-content" id="pills-tabContent">
+	{{{BLOQUE_TAB}}}
+	<div class="tab-pane fade {{{CONTENT_TAB_ACTIVE}}} local_tab" id="pills-{{{NOMBRE_TAB}}}" role="tabpanel" aria-labelledby="pills-{{{NOMBRE_TAB}}}-tab">
+		<div class="row">
+			<div class="col-xs-12 text-right">
+				<div id="div_agente">
+					<i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+					Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong class="ct">{{{CUIT}}}</strong> | Cargo:<strong>{{{DENOMINACION}}}</strong></div>
+			</div>  
+		</div>
+		{{{CONTENT_TAB}}}
+	</div>
+	{{{/BLOQUE_TAB}}}
+	</div>
+	{{{CONTENT_OBS}}}
+</div>

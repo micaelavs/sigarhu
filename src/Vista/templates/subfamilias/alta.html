@@ -1,0 +1,32 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+<div class="col-md-4"></div>
+  <div class="col-md-4">
+      <label class="control-label" for="familia_puesto">Familia de Puesto<span class="text-danger"> *</span></label>
+    <select class="form-control" id="familia_puesto" name="familia_puesto">
+    <option value=""> Seleccione </option>
+     {{{FAMILIA_PUESTO}}}
+       <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     {{{/FAMILIA_PUESTO}}}
+      </select>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label class="control-label" for="tipo_disc">Subfamilia<span class="text-danger"> *</span> </label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+</div>
+<br>
+ <div class="row">
+ 	<div class="col-md-4"></div>
+    <div class="col-md-4 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_subfamilia" value="{{{OPERACION}}}" id='boton_subfamilia' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form>

@@ -1,0 +1,180 @@
+{{{UBICACION_ESTRUCTURA}}}
+<form action="{{{FORM}}}"" method="POST" autocomplete="off" id="form">
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="nivel_organigrama" class="control-label">Nivel de Organigrama <span class="required">*</span></label>
+        <select name="nivel_organigrama" id="nivel_organigrama" class="form-control" required onchange="$('#buscar_dependencias').click()">
+         <option value="">Seleccione</option>
+          {{{NIVEL_ORGANIGRAMA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/NIVEL_ORGANIGRAMA}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="dependencia" class="control-label">Dependencia <span class="required">*</span></label>
+          <select name="dep_id_dependencia" id="dep_id_dependencia" class="form-control" onchange="$('#buscar_dependencias').click()">
+            <option value="">Seleccione</option>
+            {{{DEPENDENCIA}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/DEPENDENCIA}}}
+          </select>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="form-group">
+        <label for="dependencia_informal" class="control-label">Dependencia Informal</label>
+          <select name="dep_id_informal" id="dep_id_informal" class="form-control" onchange="$('#buscar_dependencias')">
+            <option value="">Seleccione</option>
+            {{{DEPENDENCIA_INFORMAL}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/DEPENDENCIA_INFORMAL}}}
+          </select>
+      </div>
+    </div>
+  </div>
+  <button type="submit" id="buscar_dependencias" name="buscar_dependencias" value="buscar_dependencias" hidden></button>
+   <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa fa-sitemap"></i>  Estructura</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Ministerio de Transporte</label>
+        <span class="form-control" disabled>{{{MINISTRO}}}</span>
+      </div>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Secretaría</label>
+        <span class="form-control" disabled>{{{SECRETARIA}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Subsecretaría</label>
+        <span class="form-control" disabled>{{{SUBSECRETARIA}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Dirección Nacional o General</label>
+        <span class="form-control" disabled>{{{DIR_NACIONAL_GENERAL}}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Dirección Simple</label>
+        <span class="form-control" disabled>{{{DIR_SIMPLE}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Coordinación</label>
+        <span class="form-control" disabled>{{{COORDINACION}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Unidad o Área</label>
+        <span class="form-control" disabled>{{{UNIDAD_AREA}}}</span>
+      </div>
+    </div>
+  </div>
+    <div class="row">  
+    <div class="col-md-4">
+    </div>
+      {{{INFORMAL}}}
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Unidad o Área Informal</label>
+        <span class="form-control" disabled>{{{UNIDAD_INFORMAL}}}</span>
+      </div>
+    </div>
+    {{{/INFORMAL}}}
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value='ubicacion_estructura' id='submit' title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>    
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/UBICACION_ESTRUCTURA}}}
+{{{SPAN_UBICACION_ESTRUCTURA}}}
+<div class="row subtitulo">
+  <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa fa-sitemap"></i>  Estructura</h6></div>
+</div>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+      <label for="" class="control-label">Ministerio de Transporte</label>
+      <span class="form-control" disabled>{{{MINISTRO}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="control-label">Secretaría</label><br>
+    <span class="form-control" disabled>{{{SECRETARIA}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Subsecretaría</label><br>
+     <span class="form-control" disabled>{{{SUBSECRETARIA}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Dirección Nacional o General</label><br>
+    <span class="form-control" disabled>{{{DIR_NACIONAL_GENERAL}}}</span>
+  </div>
+</div>
+<div class="row">  
+  <div class="col-md-4">
+    <label class="control-label">Dirección Simple</label><br>
+    <span class="form-control" disabled>{{{DIR_SIMPLE}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Coordinación</label><br>
+    <span class="form-control" disabled>{{{COORDINACION}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Unidad o Área</label><br>
+    <span class="form-control" disabled>{{{UNIDAD_AREA}}}</span>
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-4"></div>
+    <div class="col-md-4">
+     <label class="control-label">Dependencia Informal</label><br>
+      <span class="form-control" disabled>{{{DEPENDENCIA_INFORMAL}}}</span>
+    </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-right">
+      <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+    </div>
+  </div>
+</div>
+{{{ADJUNTAR_DOC}}}
+{{{/SPAN_UBICACION_ESTRUCTURA}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

@@ -1,0 +1,95 @@
+<div class="row" id="tipo" data-tipo="2">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_modalidad_vinculacion" class="control-label">Modalidad de Vinculación</label>
+  {{{MODALIDAD_VINCULACION}}}        
+        <select name="id_modalidad_vinculacion" id="id_modalidad_vinculacion" class="form-control">
+          <option value="">Seleccione</option>
+          {{{MODALIDADES_VINCULACION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/MODALIDADES_VINCULACION}}}
+        </select>
+  {{{/MODALIDAD_VINCULACION}}}
+  {{{SPAN_MODALIDAD_VINCULACION}}}
+  		<input type="hidden" name="id_modalidad_vinculacion" id="id_modalidad_vinculacion" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_MODALIDAD_VINCULACION}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_situacion_revista" class="control-label">Situación de Revista</label>
+  {{{SITUACION_REVISTA}}}
+        <select name="id_situacion_revista" id="id_situacion_revista" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SITUACIONES_REVISTA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SITUACIONES_REVISTA}}}
+        </select>
+  {{{/SITUACION_REVISTA}}}
+  {{{SPAN_SITUACION_REVISTA}}}
+  		<input type="hidden" name="id_situacion_revista" id="id_situacion_revista" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_SITUACION_REVISTA}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="unidad_retributiva" class="control-label">Unidad Retributiva</label>
+    {{{UNIDAD_RETRIBUTIVA}}}
+        <input type="text" id="unidad_retributiva" name="unidad_retributiva" class="form-control" value="{{{VALUE}}}">
+      {{{/UNIDAD_RETRIBUTIVA}}}
+    {{{SPAN_UNIDAD_RETRIBUTIVA}}}
+      <input type="hidden" name="unidad_retributiva" id="unidad_retributiva" value="{{{VALUE}}}">
+      <span class="form-control" id="unida_retributiva" disabled>{{{VALUE}}}</span>
+    {{{/SPAN_UNIDAD_RETRIBUTIVA}}}   
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_nivel" class="control-label">Función</label>
+  {{{NIVEL}}}
+        <select name="id_nivel" id="id_nivel" class="form-control">
+          <option value="">Seleccione</option>
+          {{{NIVELES}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/NIVELES}}}
+        </select>
+  {{{/NIVEL}}}
+  {{{SPAN_NIVEL}}}
+  		<input type="hidden" name="id_nivel" id="id_nivel" value="{{{ID}}}">
+        <span class="form-control" id = "nivel" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_NIVEL}}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="id_grado" class="control-label">Nivel</label>
+  {{{GRADO}}}
+        <select name="id_grado" id="id_grado" class="form-control">
+          <option value="">Seleccione</option>
+          {{{GRADOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/GRADOS}}}
+        </select>
+  {{{/GRADO}}}
+  {{{SPAN_GRADO}}}
+      <input type="hidden" name="id_grado" id="id_grado" value="{{{ID}}}">
+        <span class="form-control" id="grado" disabled>{{{VALUE}}}</span>
+  {{{/SPAN_GRADO}}}
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="alert alert-warning fade in alert-dismissable">
+        <i class="fa fa-info-circle" aria-hidden="true"></i><strong> Unidades Retributivas: </strong>
+            Mínimas <strong><span id="ur_minimo">{{{MIN}}} - </span></strong>
+            Máximas <strong><span id="ur_maximo">{{{MAX}}}</span></strong>
+      </div>
+    </div>
+        <input type="hidden" name="id_agrupamiento" id="id_agrupamiento" value="{{{AGRUPAMIENTO}}}">
+        <input type="hidden" name="id_tramo" id="id_tramo" value="{{{TRAMO}}}">
+  </div>
+</div>

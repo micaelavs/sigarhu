@@ -1,0 +1,53 @@
+<div class='row'>
+    <div class='col-xs-12 text-right'>
+        <div id='div_agente'><i class='fa fa-puzzle-piece' aria-hidden='true'></i> Agente:
+            <strong>{{{NOMBRE}}} {{{APELLIDO}}}</strong> |
+            Cuit:<strong>{{{CUIT}}}</strong></div>
+    </div>
+</div>
+{{{HAYURS}}}
+<div class="row titulo">
+    <div class="col-md-1">
+        &nbsp;
+    </div>
+    <div class="col-md-3 columna text-center">
+        Unidades Retributivas
+    </div>
+    <div class="col-md-3 columna text-center">
+        Monto Unidad
+    </div>
+    <div class="col-md-4 columna text-center">
+        Remuneración
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-1">
+        &nbsp;
+    </div>
+    <div class="col-md-3 coleft  text-center" style="border-bottom:1px solid #CECECE">
+        {{{UR}}}
+    </div>
+    <div class="col-md-3 text-center" style="border-bottom:1px solid #CECECE">
+        {{{MONTO}}}
+    </div>
+    <div class="col-md-4 colright" style="border-bottom:1px solid #CECECE">
+        {{{TOTAL}}}
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-warning fade in alert-dismissable">
+            <i class="fa fa-info-circle" aria-hidden="true"></i><strong> Unidades Retributivas: </strong>
+            Mínimas <strong><span id="ur_minimo">{{{MIN}}} - </span></strong>
+            Máximas <strong><span id="ur_maximo">{{{MAX}}}</span></strong>
+        </div>
+    </div>
+</div>
+{{{/HAYURS}}}
+<div class="row">
+    <div class="col-md-12 text-right">
+        <a href='{{{HREF}}}' class="btn btn-default" >VOLVER</a>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="tipo_disc">Sindicato<span class="text-danger"> *</span> </label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+   <div class="col-md-2">
+    <div class="form-group">
+      <label class="control-label" for="desc">Sigla</label>
+      <input type="text" class="form-control" id="codigo" name="codigo" value="{{{CODIGO}}}">
+    </div>
+  </div>
+</div>
+<br>
+ <div class="row">
+ 	<div class="col-md-2"></div>
+    <div class="col-md-8 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_sindicato" value="{{{OPERACION}}}" id='boton_sindicato' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form>

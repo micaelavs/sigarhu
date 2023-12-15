@@ -1,0 +1,75 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<br>
+<div class="row">
+<div class="col-md-3"></div>
+   <div class="col-md-6">
+    <div class="form-group">
+      <label class="control-label" for="nombre"> Nombre <span class="required">*</span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-9"><h6 style="margin-top: 10px;">Rango de Días</h6></div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-3">
+		<label class="control-label" for="dia_desde">Desde <span class="required">*</span></label>
+		<div class="form-group">
+			<select class="form-control" id="dia_desde" name="dia_desde">
+			<option value="">Seleccione un día</option>
+			{{{DIA_DESDE}}}
+       		<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+    		 {{{/DIA_DESDE}}}
+			</select>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<label class="control-label" for="dia_hasta">Hasta <span class="required">*</span></label>
+		<div class="form-group">
+			<select class="form-control" id="dia_hasta" name="dia_hasta">
+			<option value="">Seleccione un día</option>
+			 {{{DIA_HASTA}}}
+        	<option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     		{{{/DIA_HASTA}}}
+			</select>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-9"><h6 style="margin-top: 10px;">Rango de Horario</h6></div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-3">
+		<div class="form-group">
+			<label class="control-label" for="hora_desde">Desde <span class="required">*</span></label>
+			<div class='input-group '>
+				<input type='text' class="form-control" name="hora_desde" id="hora_desde"  value="{{{HORA_DESDE}}}">
+				<span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="form-group">
+			<label class="control-label" for="hora_hasta">Hasta <span class="required">*</span></label>
+			<div class='input-group '>
+				<input type='text' class="form-control" name="hora_hasta" id="hora_hasta"  value="{{{HORA_HASTA}}}">
+				<span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+ <div class="row">
+ 	<div class="col-md-2"></div>
+    <div class="col-md-7 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_horario" value="{{{OPERACION}}}" id='boton_horario' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form>

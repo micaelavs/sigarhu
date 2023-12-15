@@ -1,0 +1,52 @@
+<form action="{{{FORM}}}" method='POST' enctype="multipart/form-data">
+  <div class="row">
+      <div class="col-xs-12 text-right">
+          <div id="div_agente">
+            <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+        Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong></div>
+      </div>   
+  </div>
+  <br>
+  {{{ACTUAL}}}
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="alert alert-info" disabled><strong>Archivo Actual [    fecha: </strong>{{{FECHA}}}  <strong>][  nombre: </strong>{{{NOMBRE}}} <strong>][</strong> <a target="_blank" href="{{{LINK}}}">  <i class="fa fa-eye" aria-hidden="true"></i>
+ VER ARCHIVO</a> <strong>]</strong></div>
+    </div>
+  </div>
+  {{{/ACTUAL}}}
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="form-group">
+         <label for="id_tipo" class="control-label">Tipo Documento</label>
+        <select name="id_tipo" id="id_tipo" class="form-control">
+          <option value="">Seleccione</option>
+          {{{ID_TIPO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/ID_TIPO}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 add-file btn-docs">
+      <label for="" class="control-label">Adjuntar Documento</label>
+      <br>
+      <input class="uploads" type="file" name="documento" data-show-preview="false" accept="text/csv, application/pdf, application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/msword">
+    </div>
+
+    <input type="hidden" name="id_emp" value="{{{ID_EMP}}}">
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" name="formulario" id="guardar" value="{{{ACCION}}}">{{{NOMBRE_BOTON}}}</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

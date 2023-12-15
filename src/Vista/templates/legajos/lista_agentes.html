@@ -1,0 +1,87 @@
+
+<div class="row" id="url-base" data_url='{{{URL_BASE}}}'>
+  <div class="col-xs-12">
+    <a role="button" data-toggle="collapse" href="#collapseFiltros" aria-expanded="false" aria-controls="collapseFiltros"
+      style="display: block;">
+      <span class="">
+        <i class="fa fa-filter"></i> Filtros
+        <i class="fa fa-caret-right fa-fw" id="collapseFiltros_caret"></i>
+      </span>
+    </a>
+    <div class="collapse" id="collapseFiltros">
+      <div class="">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="id_dependencia" class="control-label">Por Dependencia: </label>
+              <select name="id_dependencia" id="id_dependencia" class="form-control">
+                <option value="">Seleccione</option>
+                {{{DEPENDENCIAS}}}
+                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                {{{/DEPENDENCIAS}}}
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <div id="cred" class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input class="form-control" type="checkbox" name="directos" id="directos" value="1" checked="1">
+                  <label id="label_directos" for="directos" data-toggle="tooltip" data-original-title="" title="Seleccione entre 'Todos' los agentes bajo la dependencia o solo agentes 'Directos'">Directos</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="estado" class="control-label">Estado: </label>
+              <select name="estado" id="estado" class="form-control">
+                <option value="">Seleccione</option>
+                {{{ESTADO}}}
+                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                {{{/ESTADO}}}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="modalidad_contratacion" class="control-label">Modalidad de Vinculaci&oacute;n: </label>
+              <select name="modalidad_contratacion" id="modalidad_contratacion" class="form-control">
+                <option value="">Seleccione</option>
+                {{{MODALIDAD_CONTRATACION}}}
+                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                {{{/MODALIDAD_CONTRATACION}}}
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="situacion_revista" class="control-label">Situaci&oacute;n de Revista: </label>
+              <select name="situacion_revista" id="situacion_revista" class="form-control">
+                <option value="">Seleccione</option>
+                {{{SITUACION_REVISTA}}}
+                <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                {{{/SITUACION_REVISTA}}}
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <table id="dataTable" class="table table-striped dataTables" width="100%"></table>
+  </div>
+</div>
+<div class="col-md-8 exportador">
+  {{{BOTON_EXCEL}}}
+  <button id="accion_exportador" class="btn {{{CLASS}}}" value="{{{FORM}}}">{{{NOMBRE}}}<span class="fa fa-fw fa-cloud-download"></button>
+  {{{/BOTON_EXCEL}}}
+</div>

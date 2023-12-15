@@ -1,0 +1,645 @@
+{{{ADMINISTRACION}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off">
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="glyphicon glyphicon-time"></i>  Carga Horaria </h6></div>
+  </div> 
+  <div class="row">
+    <div class='col-md-1'></div>
+    <div class='col-md-5 alert alert-info' role='alert'>
+      <h6>
+          <i class="fa fa-info-circle" aria-hidden="true"></i> 
+          {{{MSJ_PLANTILLA}}} 
+          {{{MSJ_GRILLA}}}</h6>
+    </div>
+  {{{SHOW_PLANTILLA_HORARIO}}}
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Plantillas Horarias</label>
+        <select class="form-control" id="select_horario" name="select_horario" >
+          <option value="">Seleccione</option>
+          {{{PLANTILLA_HORARIO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/PLANTILLA_HORARIO}}}
+        </select>
+      </div>
+    </div>
+  {{{/SHOW_PLANTILLA_HORARIO}}}
+  </div>
+  <div class="row top150">
+    <label class="control-label">Grilla Horaria</label>
+    <br>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group" >
+        <div class='input-group'>
+          <div class="hora_icon">Domingo <span class="glyphicon glyphicon-time"></span> </div>
+            <input type='text' class="form-control hora calcular_horas" name="horarios[0][0]" id="hora_desde_domingo" 
+            value="{{{HORA_DESDE_DOMINGO}}}"/>  
+            <input type='text' class="form-control hora calcular_horas" name="horarios[0][1]" id="hora_hasta_domingo"
+             value="{{{HORA_HASTA_DOMINGO}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group">
+        <div class='input-group'>
+          <div class="hora_icon">Lunes <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[1][0]" id="hora_desde_lunes"
+           value="{{{HORA_DESDE_LUNES}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[1][1]" id="hora_hasta_lunes"
+          value="{{{HORA_HASTA_LUNES}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group">
+        <div class='input-group '>
+          <div class="hora_icon">Martes <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[2][0]" id="hora_desde_martes" 
+          value="{{{HORA_DESDE_MARTES}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[2][1]" id="hora_hasta_martes" 
+          value="{{{HORA_HASTA_MARTES}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group">
+        <div class='input-group '>
+          <div class="hora_icon">Miércoles <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[3][0]" id="hora_desde_miercoles" 
+          value="{{{HORA_DESDE_MIERCOLES}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[3][1]" id="hora_hasta_miercoles" 
+          value="{{{HORA_HASTA_MIERCOLES}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group" >
+        <div class='input-group '>
+          <div class="hora_icon">Jueves <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[4][0]" id="hora_desde_jueves" 
+          value="{{{HORA_DESDE_JUEVES}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[4][1]" id="hora_hasta_jueves" 
+          value="{{{HORA_HASTA_JUEVES}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group" >
+        <div class='input-group '>
+          <div class="hora_icon">Viernes <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[5][0]" id="hora_desde_viernes" 
+          value="{{{HORA_DESDE_VIERNES}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[5][1]" id="hora_hasta_viernes" 
+          value="{{{HORA_HASTA_VIERNES}}}"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-horario div_hora">
+      <div class="form-group" >
+        <div class='input-group '>
+          <div class="hora_icon">Sábado <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[6][0]" id="hora_desde_sabado" 
+          value="{{{HORA_DESDE_SABADO}}}"/>
+          <input type='text' class="form-control hora calcular_horas" name="horarios[6][1]" id="hora_hasta_sabado" 
+          value="{{{HORA_HASTA_SABADO}}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Turno</label>
+        <select name="id_turno" id="id_turno" class="form-control">
+          <option value="">Seleccione</option>
+          {{{TURNO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TURNO}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label">Total Horas Semanales</label>
+        <input type="text" class="form-control" name="horas_semanales" id="horas_semanales" disabled>
+      </div>
+    </div>
+    <div class="form-group col-xs-3">
+      <div class="funkyradio presen">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="planilla_reloj" id="planilla_reloj" value="1" {{{CHECKED}}}>
+          <label for="planilla_reloj" data-toggle="tooltip">Firma Presentismo</label>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-clock-o" aria-hidden="true"></i>
+  Horas Extras</h6></div>
+    <div class="col-xs-9 text-right">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-1">
+    </div>
+    <div class="form-group col-xs-2">
+      <div class="funkyradio presen">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="horas_extras" id="horas_extras" value="1" {{{HORA_EXTRA}}}>
+          <label for="horas_extras" data-toggle="tooltip">Horas Extras</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Año</label>
+        <span class="form-control" id= "anio_extra" disabled>{{{ANIO_EXTRA}}}</span>
+      </div>
+    </div>
+     <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Mes</label>
+        <span class="form-control" id= "mes_extra" disabled>{{{MES_EXTRA}}}</span>
+      </div>
+    </div>
+     <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label"> Acto Administrativo</label>
+        <span class="form-control" id= "acto_administrativo" disabled>{{{ACTO_ADMINISTRATIVO}}}</span>
+      </div>
+    </div>
+    <div class="col-md-3"  id="ver_archivo">
+      <div class="form-group">
+        {{{HISTORIAL_HORA_EXTRA}}}
+        <a class="btn btn-info" href="{{{URL_HISTORIAL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Historial de Horas Extras" data-toggle="modal" target = "_self" ></i>HISTORIAL</a> 
+        {{{/HISTORIAL_HORA_EXTRA}}}
+       {{{NUEVA_HORA_EXTRA}}}
+        <a class="btn btn-default" href="{{{URL_HORA_EXTRA}}}" data-toggle="tooltip" id='boton_hora_extra' data-placement="top" data-id="" title="Nueva Hora Extra" Horas Extras" data-toggle="modal" target = "_self" ></i>NUEVO</a> 
+        {{{/NUEVA_HORA_EXTRA}}}
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-6 text-left">
+      <h6 class="dom">
+        <i class="fa fa-location-arrow"></i>  Datos de Ubicación
+      </h6>
+    </div>
+    <div class="col-xs-6 text-right">
+      <div class="btn-group botonera" data-toggle="buttons">
+          <button class="btn btn-info" id="ubicacion_accion_alta" value="alta">Cambio de Ubicación</button>
+          <button class="btn btn-primary" id="ubicacion_accion_modificar" value="modificar">Modificar Ubicación Actual</button>
+          <input type="hidden" value="" id="adm_ubicacion_accion" name="adm_ubicacion_accion">
+      </div>
+    </div>
+  </div>
+  <div class="row" id="div_adm_ubicacion">
+    <div class="col-md-1">
+      <input type="hidden" value="{{{ID_UBICACION}}}" id="id_ubicacion" name="id_ubicacion">
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id_edificio" class="control-label">Edificio <span class="required">*</span></label>
+        <select name="id_edificio" id="id_edificio" class="form-control">
+          <option value="">Seleccione</option>
+          {{{EDIFICIOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/EDIFICIOS}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label class="control-label">Calle/Número <span class="required">*</span></label>
+      <span class="form-control" id="ubicacion_calle_numero" disabled>{{{CALLE_NUMERO}}}</span>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="ubicacion_piso" class="control-label">Piso <span class="required">*</span></label>
+        <select name="ubicacion_piso" id="ubicacion_piso" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PISOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/PISOS}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="ubicacion_oficina" class="control-label">Oficina <span class="required">*</span></label>
+        <select name="ubicacion_oficina" id="ubicacion_oficina" class="form-control">
+          <option value="">Seleccione</option>
+          {{{OFICINAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/OFICINAS}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="ubicacion_provincia" class="control-label">Provincia</label>
+        <span class="form-control" id="ubicacion_provincia" disabled>{{{UBICACION_PROVINCIA}}}</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="ubicacion_localidad" class="control-label">Localidad</label>
+      <span class="form-control" id="ubicacion_localidad" disabled>{{{UBICACION_LOCALIDAD}}}</span>
+    </div>
+  </div> 
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+  Datos de Licencias Especiales</h6></div>
+    <div class="col-xs-9 text-right">
+      <div class="btn-group botonera" data-toggle="buttons">
+          <button class="btn btn-info" id="licencia_accion_alta" value="alta">Cambio de Licencia Especial</button>
+          <button class="btn btn-primary" id="licencia_accion_modificar" value="modificar">Modificar Licencia Actual</button>
+          <input type="hidden" value="" id="adm_licencia_accion" name="adm_licencia_accion">
+      </div>
+    </div>
+
+  </div>
+
+  <div id="div_licencias_especiales">
+    <div class="row">
+      <div class="form-group col-xs-1"></div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="" class="control-label">Licencias Especiales</label>
+          <select name="id_licencia" id="id_licencia" class="form-control">
+            <option value="">Seleccione</option>
+            {{{LICENCIAS_ESPECIALES}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+            {{{/LICENCIAS_ESPECIALES}}}
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3 form-group">
+          <label for="fecha_desde" class="control-label">Fecha Inicio</label>
+          <div class='input-group date'>
+            <input type='text' class="form-control fecha_licencia" id="fecha_desde" name="fecha_desde" value="{{{FECHA_DESDE}}}">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>      
+      </div>
+      <div class="col-md-3 form-group">
+          <label for="fecha_hasta" class="control-label">Fecha Fin</label>
+          <div class='input-group date'>
+            <input type='text' class="form-control fecha_licencia" id="fecha_hasta" name="fecha_hasta" value="{{{FECHA_HASTA}}}">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>      
+      </div>        
+    </div>
+  </div>
+  <br>
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-exchange"></i>  Estado del Agente</h6></div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-xs-1"></div>
+    <div class="form-group col-xs-2">
+      <label for="activo" class="control-label">Activo</label>
+      <select name="activo" id="activo" class="form-control">
+        <option value="">Seleccione</option>
+        {{{ESTADOS}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/ESTADOS}}}
+      </select>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Motivo de Baja</label>
+        <select name="id_motivo" id="id_motivo" class="form-control" disabled>
+          <option value="">Seleccione</option>
+          {{{MOTIVO_BAJA}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/MOTIVO_BAJA}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+        <label for="fecha" class="control-label">Fecha de Baja</label>
+        <div class='input-group date' id="">
+          <input type='text' class="form-control fecha" id="fecha_baja" name="fecha_baja" value="{{{FECHA_BAJA}}}" disabled>
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row subtitulo">
+    <div class="col-xs-4 text-left"><h6 class="dom"><i class="fa fa-building"></i>  Agente en Situación de Comisión </h6></div>
+  </div> 
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Comisión</label>
+        <select name="comision" id="comision" class="form-control">
+          <option value="">Selecciones</option>
+          {{{COMISION}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/COMISION}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Organismo de Destino</label>
+        <select name="organismo_destino" id="organismo_destino" class="form-control" disabled>
+          <option value="">Seleccione</option>
+          {{{ORGANISMO_DESTINO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/ORGANISMO_DESTINO}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="" class="control-label">Organismo de Origen</label>
+        <select name="organismo_origen" id="organismo_origen" class="form-control" disabled>
+          <option value="">Seleccione</option>
+          {{{ORGANISMO_ORIGEN}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/ORGANISMO_ORIGEN}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="administracion" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/ADMINISTRACION}}}
+
+{{{SPAN_ADMINISTRACION}}}
+<div class="row subtitulo">
+    <div class="col-xs-3 text-left">
+      <h6 class="dom"><i class="glyphicon glyphicon-time"></i>  Carga Horaria </h6>
+    </div>
+</div>
+<div class="row top150">
+  <label class="control-label">Grilla Horaria</label>
+  <br>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group" >
+      <div class='input-group'>
+        <div class="hora_icon">Domingo <span class="glyphicon glyphicon-time"></span> </div>
+          <input type='text' class="form-control hora calcular_horas" id="hora_desde_domingo" 
+          value="{{{HORA_DESDE_DOMINGO}}}" readonly/>  
+          <input type='text' class="form-control hora calcular_horas" id="hora_hasta_domingo"
+           value="{{{HORA_HASTA_DOMINGO}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group">
+      <div class='input-group'>
+        <div class="hora_icon">Lunes <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_lunes"
+         value="{{{HORA_DESDE_LUNES}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_lunes"
+        value="{{{HORA_HASTA_LUNES}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group">
+      <div class='input-group '>
+        <div class="hora_icon">Martes <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_martes" 
+        value="{{{HORA_DESDE_MARTES}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_martes" 
+        value="{{{HORA_HASTA_MARTES}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group">
+      <div class='input-group '>
+        <div class="hora_icon">Miércoles <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_miercoles" 
+        value="{{{HORA_DESDE_MIERCOLES}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_miercoles" 
+        value="{{{HORA_HASTA_MIERCOLES}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group" >
+      <div class='input-group '>
+        <div class="hora_icon">Jueves <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_jueves" 
+        value="{{{HORA_DESDE_JUEVES}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_jueves" 
+        value="{{{HORA_HASTA_JUEVES}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group" >
+      <div class='input-group '>
+        <div class="hora_icon">Viernes <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_viernes" 
+        value="{{{HORA_DESDE_VIERNES}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_viernes" 
+        value="{{{HORA_HASTA_VIERNES}}}" readonly/>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1 col-horario div_hora">
+    <div class="form-group" >
+      <div class='input-group '>
+        <div class="hora_icon">Sábado <span class="glyphicon glyphicon-time"></span> </div>
+        <input type='text' class="form-control hora calcular_horas" id="hora_desde_sabado" 
+        value="{{{HORA_DESDE_SABADO}}}" readonly/>
+        <input type='text' class="form-control hora calcular_horas" id="hora_hasta_sabado" 
+        value="{{{HORA_HASTA_SABADO}}}" readonly/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label class="control-label">Turno</label>
+    <span class="form-control" disabled>{{{TURNO}}}</span>
+  </div>
+
+  <div class="col-md-3">
+    <label for="" class="control-label">Total Horas Semanales</label>
+    <span class="form-control" id="span_horas_semanales" disabled></span>
+  </div>
+
+  <div class="col-md-3">
+    <label class="control-label">Firma Presentismo</label>
+    <span class="form-control" disabled>{{{PLANILLA_RELOJ}}}</span>
+  </div>
+</div>
+<br>
+<div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-clock-o" aria-hidden="true"></i>
+  Horas Extras</h6></div>
+    <div class="col-xs-9 text-right">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-1">
+    </div>
+    <div class="col-xs-2">
+          <label class="control-label">Horas Extras</label>
+          <span class="form-control" disabled>{{{HORA_EXTRA}}}</span>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Año</label>
+        <span class="form-control" id= "anio_extra" disabled>{{{ANIO_EXTRA}}}</span>
+      </div>
+    </div>
+     <div class="col-md-1">
+      <div class="form-group">
+        <label for="" class="control-label">Mes</label>
+        <span class="form-control" id= "mes_extra" disabled>{{{MES_EXTRA}}}</span>
+      </div>
+    </div>
+     <div class="col-md-3">
+      <div class="form-group">
+        <label for="" class="control-label"> Acto Administrativo</label>
+        <span class="form-control" id= "acto_administrativo" disabled>{{{ACTO_ADMINISTRATIVO}}}</span>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-location-arrow"></i>  Datos de Ubicación</h6></div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label class="control-label">Edificio</label>
+    <span class="form-control" disabled>{{{EDIFICIO}}}</span>
+  </div>
+  <div class="col-md-4">
+    <label class="control-label">Calle/Número</label>
+    <span class="form-control" disabled>{{{CALLE_NUMERO}}}</span>
+  </div>
+  <div class="col-md-1">
+    <label class="control-label">Piso</label>
+    <span class="form-control" disabled>{{{PISO}}}</span>
+  </div>
+  <div class="col-md-1">
+    <label class="control-label">Oficina</label>
+    <span class="form-control" disabled>{{{OFICINA}}}</span>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="provincia" class="control-label">Provincia</span></label>
+      <span class="form-control" id="provincia" disabled>{{{UBICACION_PROVINCIA}}}</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="localidad" class="control-label">Localidad</span></label>
+    <span class="form-control" id="localidad" disabled>{{{UBICACION_LOCALIDAD}}}</span>
+  </div>
+</div> 
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-vcard"></i>  Datos de Licencias Especiales</h6></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label class="control-label">Licencias Especiales</label>
+    <span class="form-control" disabled>{{{LICENCIAS_ESPECIALES}}}</span>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label">Fecha Inicio</label>
+    <span class="form-control" disabled>{{{FECHA_DESDE}}}</span>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label">Fecha Fin</label>
+    <span class="form-control" disabled>{{{FECHA_HASTA}}}</span>
+  </div>
+</div>
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-exchange"></i>  Estatus del empleado</h6></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-1">
+    <label class="control-label">Activo</label>
+    <span class="form-control" disabled>{{{ACTIVO}}}</span>
+  </div>
+
+  <div class="col-md-4">
+    <label class="control-label">Motivo de Baja</label>
+    <span class="form-control" disabled>{{{MOTIVO_BAJA}}}</span>
+  </div>
+
+  <div class="col-md-4">
+    <label class="control-label">Fecha de Baja</label>
+    <span class="form-control" disabled>{{{FECHA_BAJA}}}</span>
+  </div>
+</div>
+<br>
+<div class="row subtitulo">
+  <div class="col-xs-4 text-left"><h6 class="dom"><i class="fa fa-building"></i>  Agente en Situación de Comisión </h6></div>
+</div> 
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-1">
+    <label class="control-label">Comisión</label>
+    <span class="form-control" disabled>{{{COMISION}}}</span>
+  </div>
+
+  <div class="col-md-4">
+    <label class="control-label">Organismo de Destino</label>
+    <span class="form-control" disabled>{{{ORGANISMO_DESTINO}}}</span>
+  </div>
+
+  <div class="col-md-4">
+    <label class="control-label">Organismo de Origen</label>
+    <span class="form-control" disabled>{{{ORGANISMO_ORIGEN}}}</span>
+  </div>
+</div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+  {{{ADJUNTAR_DOC}}}
+{{{/SPAN_ADMINISTRACION}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}

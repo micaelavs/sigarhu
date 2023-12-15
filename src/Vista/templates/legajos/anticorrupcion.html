@@ -1,0 +1,161 @@
+{{{CAMPOS_ANTICORRUPCION}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom">Anticorrupción</h6></div>
+  <div class="col-xs-9 text-right"></div>
+</div>
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 form-group">
+      <div id="cred" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="obligado_dj" id="obligado_dj" value="1" {{{CHECKED}}}>
+          <label for="obligado_dj"  data-toggle="tooltip" ><strong> Obligado a Presentar Declaración Jurada</strong></label>
+        </div>
+      </div>
+  </div> 
+</div>
+</br>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+      <label for="fecha_designacion" class="control-label">Fecha de Designación</label>
+      <div class='input-group date' id="fecha_desig">
+        <input type='text' class="form-control fecha " id="fecha_designacion" name="fecha_designacion" value="{{{FECHA_DESIGNACION}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>      
+  </div>
+  <div class="col-md-3" >
+      <label for="fecha_publicacion_designacion" class="control-label">Fecha Publicación Designación</label>
+      <div class='input-group date' id="fecha_publi_designacion">
+        <input type='text' class="form-control fecha " id="fecha_publicacion_designacion" name="fecha_publicacion_designacion" value="{{{FECHA_PUBLICACION_DESIGNACION}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>  
+  </div>
+  <div class="col-md-3">
+      <label for="fecha_aceptacion_renuncia" class="control-label">Fecha Aceptación Renuncia</label>
+      <div class='input-group date' id="fecha_acep_renuncia">
+        <input type='text' class="form-control fecha" id="fecha_aceptacion_renuncia" name="fecha_aceptacion_renuncia" value="{{{FECHA_ACEPTACION_RENUNCIA}}}" {{{DISABLED_RENUNCIA}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>  
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-1"></div>
+   <div class="col-md-3">
+      <label for="tipo_dj" class="control-label">Tipo Declaración Jurada</label>
+    <span class="form-control" disabled>{{{TIPO_PRESENTACION}}}</span>
+  </div>
+   <div class="col-md-3">
+     <label for="fecha_ultima_presentacion" class="control-label">Fecha Última Presentación</label>
+    <span class="form-control" disabled>{{{FECHA_PRESENTACION}}}</span>
+  </div>
+   <div class="col-md-3">
+     <label for="periodo_presentado" class="control-label">Periodo Presentado</label>
+    <span class="form-control" disabled>{{{PERIODO}}}</span>
+  </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+    <label for="" class="control-label">Nº Transacción</label>
+    <span class="form-control" disabled>{{{NRO_TRANSACCION}}}</span>
+  </div>
+   <div class="col-md-8" id="ver_archivo">
+      {{{ARCHIVO}}}
+       <a class="btn btn-info "   href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true" ><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+      {{{/ARCHIVO}}}
+      {{{NUEVA_PRESENTACION}}}
+        <a class="btn btn-primary" href="{{{URL_PRESENTACION}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Nueva Presentación" data-toggle="modal" target = "_self" ></i>NUEVA PRESENTACIÓN</a>
+      {{{/NUEVA_PRESENTACION}}}
+      {{{HISTORIAL}}}
+        <a class="btn btn-info" href="{{{URL_HISTORIAL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Historial de Presentaciones" data-toggle="modal" target = "_self" ></i>HISTORIAL</a> 
+      {{{/HISTORIAL}}}
+  </div>
+</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="anticorrupcion" id='boton_anticorrupcion' title="Guardar" {{{DISABLED}}}>
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>   
+ 
+</form>
+{{{/CAMPOS_ANTICORRUPCION}}}
+{{{SPAN_ANTICORRUPCION}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom">Anticorrupción</h6></div>
+  <div class="col-xs-9 text-right"></div>
+</div>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 form-group">
+    <label class="control-label">Obligado a Presentar Declaración Jurada</label>
+    <span class="form-control" disabled>{{{OBLIGADO_DJ}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label class="control-label">Fecha Designación</label>
+    <span class="form-control" disabled>{{{FECHA_DESIGNACION}}}</span>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label">Fecha Publicación Designación</label>
+    <span class="form-control" disabled>{{{FECHA_PUBLICACION_DESIGNACION}}}</span>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label">Fecha Aceptación Renuncia</label>
+    <span class="form-control" disabled>{{{FECHA_ACEPTACION_RENUNCIA}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+      <label class="control-label">Tipo Declaración Jurada</label>
+      <span class="form-control" disabled>{{{TIPO_PRESENTACION}}}</span>
+  </div>
+  <div class="col-md-3">
+      <label class="control-label">Fecha Última Presentación</label>
+      <span class="form-control" disabled>{{{FECHA_PRESENTACION}}}</span>
+  </div>
+  <div class="col-md-3 form-group">
+      <label class="control-label">Periodo Presentado</label>
+      <span class="form-control" disabled>{{{PERIODO}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2 form-group">
+      <label class="control-label">Nº de Transacción</label>
+      <span class="form-control" disabled>{{{NRO_TRANSACCION}}}</span>
+  </div>
+   <div class="col-md-3 form-group add-file">
+      <label class="control-label">ADJUNTAR ARCHIVO</label>
+        <input type="file" accept=".pdf"  name="anticorrupcion_file" id="anticorrupcion_file" data-show-preview="false" class="filestyle" disabled>
+  </div>
+  <div class="col-md-6" id="ver_archivo">
+    {{{SPAN_ANTICORRUPCION_ACCIONES}}}
+    {{{NUEVA_PRESENTACION}}}
+        <a class="btn btn-primary" href="{{{URL_PRESENTACION}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Nueva Presentación" data-toggle="modal" target = "_self" ></i>NUEVA PRESENTACIÓN</a>
+      {{{/NUEVA_PRESENTACION}}}
+      {{{HISTORIAL}}}
+        <a class="btn btn-info" href="{{{URL_HISTORIAL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Historial de Presentaciones" data-toggle="modal" target = "_self" ></i>HISTORIAL</a> 
+      {{{/HISTORIAL}}}
+      {{{/SPAN_ANTICORRUPCION_ACCIONES}}}
+  </div>
+</div>
+{{{/SPAN_ANTICORRUPCION}}}
+{{{AVISO_ANTICORRUPCION}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso">{{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO_ANTICORRUPCION}}}

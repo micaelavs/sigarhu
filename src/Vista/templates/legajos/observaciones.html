@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-12">
+		<a role="button"
+		   data-toggle="collapse"
+		   href="#collapseObservaciones"
+		   aria-expanded="false"
+		   aria-controls="collapseObservaciones"
+		   id="obs">
+			<span class="" id="span-obs" >
+				<i class="fa fa-bookmark"></i> Observaciones
+				<i class="fa fa-caret-right fa-fw" id="collapseObservaciones_caret"></i>
+			</span>
+		</a>
+	</div>	
+</div>
+<div class="collapse {{{CLASS}}}" id="collapseObservaciones">
+	<div class="row"  id="url-base" data_url='{{{URL_BASE}}}'>
+ {{{ALERT_MSJ}}}	
+		<br>
+		<div class="col-md-12">
+			<div class="input-group">
+			    <textarea class="form-control custom-control" rows="2" style="resize:none" id="legajo_observacion_ajax" data-bloque="" data-id=""></textarea>     
+			    <span class="input-group-addon btn btn-primary span-observacion" >  <i id="plus" class="fa fa-plus"></i></span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<table id="observacion" class="table table-striped dataTables" width="100%"></table>
+		</div>
+	</div>
+</div>

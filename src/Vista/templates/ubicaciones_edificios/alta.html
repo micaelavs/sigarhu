@@ -1,0 +1,58 @@
+<form id="{{{FORM}}}" method='POST' action="">
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="ubi_edificio">Edificio<span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+    </div>
+  </div>
+   <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="calle">Calle<span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="calle" name="calle" value="{{{CALLE}}}">
+    </div>
+  </div>
+   <div class="col-md-2">
+    <div class="form-group">
+      <label class="control-label" for="numero">Número<span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="numero" name="numero" value="{{{NUMERO}}}">
+    </div>
+  </div>
+</div>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-3 form-group">
+  <label class="control-label" for="id_provincia">Provincia<span class="text-danger"> *</span></label>
+  <select class="form-control" id="id_provincia" name="id_provincia" >
+    <option value=""> Seleccione </option>
+     {{{PROVINCIA}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     {{{/PROVINCIA}}}
+  </select>
+</div>
+ <div class="col-md-3 form-group">
+  <label class="control-label" for="id_localidad">Localidad<span class="text-danger"> *</span></label>
+  <select class="form-control" id="id_localidad" name="id_localidad" >
+    <option value=""> Seleccione </option>
+     {{{LOCALIDAD}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+     {{{/LOCALIDAD}}}
+  </select>
+</div>
+   <div class="col-md-2">
+    <div class="form-group">
+      <label class="control-label" for="cod_postal">Código Postal</label>
+      <input type="text" class="form-control" id="cod_postal" name="cod_postal" value="{{{COD_POSTAL}}}">
+    </div>
+  </div>
+</div>
+<br>
+ <div class="row">
+ 	<div class="col-md-2"></div>
+    <div class="col-md-8 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_ubicacion_edificio" value="{{{OPERACION}}}" id='boton_titulo' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+ </div>
+</form>

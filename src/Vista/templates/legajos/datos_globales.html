@@ -1,0 +1,274 @@
+<div class="dot">
+	<div class="row">
+		<div class="col-md-12 bor esp text-center sec_top">
+			<strong>DATOS GLOBALES</strong>
+		</div>
+	    <div class="col-md-3 text-center bor align-self-start">
+	    	<div class="row invi">.</div>
+	    	<div class="row">
+		    	<div class ="col-md-12 text-center">
+		      		<strong>Dotación Total</strong>	    	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center" ><strong>{{{TOTALES}}}</strong></div>
+			</div>
+			<div class="row invi">.</div>
+	    </div>
+	    <div class="col-md-2 text-center">
+	    	<div class="row cat">
+  			    <div class="col-md-12 text-center cat">
+	    			<strong>Hombres</strong>
+	    		</div>
+	    	</div>
+	    	<div class="row cat">
+   			    <div class="col-md-12 text-center cat">
+	    			{{{HOMBRES}}}
+	    		</div>
+	    	</div>
+	    	<div class="row dog">
+   			    <div class="col-md-12 text-center dog">
+		    		<strong>Mujeres</strong>
+		    	</div>	
+	    	</div>
+	    	<div class="row dog">
+   			    <div class="col-md-12 text-center dog">
+	    		{{{MUJERES}}}
+	    		</div>
+	    	</div>	    	
+	    </div>		
+	    <div class="col-md-2 text-center">
+	    	<div class="row cat">
+  			    <div class="col-md-12 text-center cat">
+	    		<i class="fa fa-percent"></i>
+	    		</div>
+	    	</div>
+	    	<div class="row cat">
+   			    <div class="col-md-12 text-center cat">
+	    		{{{TOTAL_H}}}
+	    		</div>
+	    	</div>
+	    	<div class="row dog">
+   			    <div class="col-md-12 text-center dog">
+		    		<i class="fa fa-percent"></i>
+		    	</div>	
+	    	</div>
+	    	<div class="row dog">
+   			    <div class="col-md-12 text-center dog">
+	    		{{{TOTAL_M}}}
+	    		</div>
+	    	</div>	    	
+	    </div>		
+	    <div class="col-md-5 text-center" style="padding-top: 15px;">
+	    	<div  id="chartdiv"></div>
+		</div>
+		<div class="col-md-12 bor sep">&nbsp;</div>
+	</div>
+</div>
+
+<div class="dot" >
+	<div class="row">
+		<div class="col-md-12 bor esp text-center sec_top">
+			<strong>PERSONAL POR UNIDAD</strong>
+		</div>
+		<div class="col-md-5 text-center graf" style="padding-top:50px;">
+			<div id="piediv"></div>
+		</div>
+		<div class="col-md-7 bor text-center">
+
+
+		 	<div class="row">
+		 		<div class="col-md-7 cat">
+		 			<span class="invi">.</span>
+		 		</div>
+		 		<div class="col-md-3 text-center cat">
+		 			<strong>Total</strong>
+		 		</div>
+		 		<div class="col-md-2 text-center cat">
+		 			<i class="fa fa-percent"></i>
+		 		</div>
+		 	</div>
+		 	{{{UNIDAD}}}
+		 	<div class="row">
+		 		<div class="col-md-7 {{{FONDO}}}">
+		 			<strong>{{{NOMBRE_UNIDAD}}}</strong>
+		 		</div>
+		 		<div class="col-md-3 text-center {{{FONDO}}}">
+		 			<span>{{{TOTAL}}}</span>
+		 		</div>
+		 		<div class="col-md-2 text-center {{{FONDO}}}">
+		 			<span>{{{PORCE}}}</span>
+		 		</div>
+		 	</div>
+		 	{{{/UNIDAD}}}
+		 	<div class="row">
+		 		<div class="col-md-7"></div>
+				<div class="col-md-5 text-right" style="padding-top: 10px">
+					<a href="{{{DPR}}}" class="btn2 btn-primary"  data-toggle="tooltip" title="Ver detalle de Datos en&#10;Proceso de Recolección."><strong>*</strong> Detalle</a>
+		    	</div>
+			</div>
+		</div>
+		<div class="col-md-12 bor text-center sep">&nbsp;</div>
+	</div>
+</div>
+
+<div class="dot">
+	<div class="row">
+		<div class="col-md-12 bor text-center sec_top"><STRONG>VINCULACIÓN</STRONG></div>
+		<div class="col-md-7 bor text-center">
+
+		 	<div class="row">
+		 		<div class="col-md-7 cat">
+		 			<span class="invi">.</span>
+		 		</div>
+		 		<div class="col-md-3 text-center cat">
+		 			<strong>Total</strong>
+		 		</div>
+		 		<div class="col-md-2 text-center cat">
+		 			<i class="fa fa-percent"></i>
+		 		</div>
+		 	</div>
+			{{{VINCULACION}}}
+		 	<div class="row">
+		 		<div class="col-md-7 {{{FONDO}}}">
+		 			<strong>{{{NOMBRE_VINCULACION}}}</strong>
+		 		</div>
+		 		<div class="col-md-3 text-center {{{FONDO}}}">
+		 			<span>{{{TOTAL}}}</span>
+		 		</div>
+		 		<div class="col-md-2 text-center {{{FONDO}}}">
+		 			<span>{{{PORCE}}}</span>
+		 		</div>
+		 	</div>
+			{{{/VINCULACION}}}
+			<div class="row">
+		 		<div class="col-md-7"></div>
+				<div class="col-md-5 text-right" style="padding-top: 10px">
+					<a href="{{{DPR}}}" class="btn2 btn-primary"  data-toggle="tooltip" title="Ver detalle de Datos en&#10;Proceso de Recolección."><strong>*</strong> Detalle</a>
+		    	</div>
+			</div>
+		</div>
+		<div class="col-md-5 text-center">
+	    	 <div style="width:100%;height:400px;padding-top:50px;" id="barrasdiv"></div>
+		</div>
+		<div class="col-md-12 bor sep">&nbsp;</div>
+	</div>
+</div> 
+<div class="dot">
+	<div class="row">
+		<div class="col-md-12 bor esp text-center sec_top"><strong>SITUACIÓN DE GENERO</strong></div>
+		<div class="col-md-5 text-center">
+			<div style="height: 250px;padding-top:20px;" id="generodiv"></div>
+		</div>
+		<div class="col-md-7 bor text-center">
+	    	<div class="row">
+		 		<div class="col-md-7 cat">
+		 			<span class="invi">.</span>
+		 		</div>
+		 		<div class="col-md-3 cat">
+		 			<strong>Total</strong>
+		 		</div>
+		 		<div class="col-md-2 cat">
+		 			<i class="fa fa-percent"></i>
+		 		</div>
+		 	</div>
+		 	<div class="row">
+		 		<div class="col-md-7 dog">
+		 			<span>Mujeres Totales</span>
+		 		</div>
+		 		<div class="col-md-3 dog">
+		 			<span>{{{MUJERES}}}</span>
+		 		</div>
+		 		<div class="col-md-2 dog">
+		 			<span>{{{TOTAL_M}}}</span>
+		 		</div>
+		 	</div>
+		 	<div class="row">
+			    <div class="col-md-12 bor esp text-center">
+	        		<strong>ROL EN EL #MTR</strong>
+	    		</div>
+	    	</div>
+	    	<div class="row">
+		 		<div class="col-md-7 cat">
+		 			<span>Autoridades Superiores</span>
+		 		</div>
+ 				<div class="col-md-3 cat">
+ 					<span>{{{TOTAL_AS}}}</span>
+ 				</div>
+ 				<div class="col-md-2 cat">
+ 					<span>{{{PORCE_AS}}}</span>
+ 				</div>
+ 			</div>
+ 			<div class="row">
+ 				<div class="col-md-7 dog">
+ 					<span>Directoras Generales, Nacionales y Simples</span>
+ 				</div>
+ 				<div class="col-md-3 dog">
+ 					<span>{{{TOTAL_DIR}}}</span>
+ 				</div>
+ 				<div class="col-md-2 dog">
+ 					<span>{{{PORCE_DIR}}}</span>
+ 				</div>
+			 </div>
+				<div class="row">
+					<div class="col-md-12 sec_top">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 sec_top">
+						&nbsp;
+					</div>
+				</div>
+		 </div>
+		<div class="col-md-12 bor esp sep">&nbsp;</div>
+	</div>
+</div> 
+
+<div class="dot">
+	<div class="row">
+		<div class="col-md-12 bor esp text-center sec_top"><strong>NIVEL DE FORMACIÓN</strong></div>
+		<div class="col-md-7 bor text-center">
+	    	<div class="row">
+	 			<div class="col-md-4 dog">
+	 				<span class="invi">.</span>
+	 			</div>
+	 			<div class="col-md-2 dog">
+	 				<strong>Total</strong> -  <i class="fa fa-percent"></i>
+	 			</div>
+	 			<div class="col-md-3 dog">
+	 				<strong>Hombres</strong> -  <i class="fa fa-percent"></i>
+	 			</div>
+	 			<div class="col-md-3 dog">
+	 				<strong>Mujeres</strong> -  <i class="fa fa-percent"></i>
+	 			</div>
+	 		</div>
+			{{{FORMACION}}}
+ 			<div class="row">
+		 		<div class="col-md-4 {{{FONDO}}}">
+		 			<strong>{{{TITULO}}}</strong>
+		 		</div>
+		 		<div class="col-md-2 {{{FONDO}}}">
+		 			<span>{{{TOTAL_F}}} - {{{PORCE}}}</span>
+		 		</div>
+		 		<div class="col-md-3 {{{FONDO}}}">
+	 				<span>{{{PORCE_H}}}</span>
+	 			</div>
+	 			<div class="col-md-3 {{{FONDO}}}">
+	 				<span>{{{PORCE_M}}}</span>
+	 			</div>
+ 			</div>
+			{{{/FORMACION}}}
+			<div class="row">
+		 		<div class="col-md-7"></div>
+				<div class="col-md-5 text-right sec_top" style="padding-top:10px;padding-right:15px">
+					<a href="{{{DPR}}}" class="btn2 btn-primary"  data-toggle="tooltip" title="Ver detalle de Datos en&#10;Proceso de Recolección."><strong>*</strong> Detalle</a>
+		    	</div>
+			</div>
+		</div>	
+		<div class="col-md-5 text-center">
+    		<div style="width: 100%;height:400px;padding-top: 20px;" id="nivelessdiv"></div>
+		</div>
+			<div class="col-md-12 bor esp sep">&nbsp;</div>		
+	</div>
+</div>

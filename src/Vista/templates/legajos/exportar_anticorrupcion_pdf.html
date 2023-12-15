@@ -1,0 +1,36 @@
+<form action="{{{FORM}}}" method="post">
+	<div class="row" id="url-base" data_url='{{{URL_BASE}}}'></div>
+		<div class="row"  style="padding-left:15px;padding-right: 15px ">
+			<div class="col-md-12 alert alert-warning">
+				<strong><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Nota:  </strong>
+				<ul>
+					<li>Si desea generar un informe con un <strong> Título</strong> determinado, complete el siguiente campo.</li>
+				</ul>
+			</div>  
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="padding-left: 30px">
+				<label class="control-label" for="titulo">Título Informe</label> 
+				<textarea class="form-control custom-control" rows="2" style="resize:none" id="titulo" name= "titulo"  placeholder="Informe de Historial Anticorrupción">{{{TITULO}}}</textarea>
+			</div>
+		</div>
+		 <div class="row">
+        	<input type="hidden" name="periodo" value="{{{PERIODO}}}">
+        	<input type="hidden" name="tipo_dj" value="{{{TIPO_DJ}}}">
+        	<input type="hidden" name="search" value="{{{SEARCH}}}">
+        	<input type="hidden" name="campo" value="{{{CAMPO}}}">
+        	<input type="hidden" name="dir" value="{{{DIR}}}">
+			<input type="hidden" name="total_rows" value="{{{TOTAL_ROWS}}}">
+        </div>
+		<br>
+	<div class="row">    
+		<div class="col-md-12 text-right">
+
+		<button  class="btn btn-primary" type="submit" value="exportar_pdf" name="exportar_pdf" id="exportar_pdf">EXPORTAR PDF<span class="fa fa-fw fa-file-pdf-o"></span></button>
+
+		{{{VOLVER}}}
+		<a href="{{{HREF}}}" class="btn btn-default">VOLVER</a>
+		{{{/VOLVER}}}      
+		</div> 
+	</div> 
+</form>

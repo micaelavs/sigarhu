@@ -1,0 +1,43 @@
+<div class='row'>
+  <div class='col-xs-12 text-right'>
+    <div id='div_agente'>
+      <i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+      Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong>
+    </div>
+  </div>
+</div>
+<div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-clock-o"></i>  Horas Extras</h6></div>
+</div>
+</br>
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+ <div class="row">
+  <div class="col-md-2"></div>
+   <div class="col-md-2">
+    <label for="" class="control-label">Año / Mes</label>
+    <div class="input-group anio_mes" id="anio">
+      <input type="text" class="form-control fecha" id="anio_mes" name="anio_mes" value="{{{ANIO_MES}}}">
+      <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+    </div>
+  </div>
+   <div class="col-md-4">
+    <div class="form-group">
+      <label for="" class="control-label"> Acto Administrativo</label>
+      <input type="text" class="form-control" name="acto_administrativo" id="acto_administrativo"  value="{{{ACTO_ADMINISTRATIVO}}}">
+    </div>
+  </div>
+ </div> 
+</br>
+<div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_extra" value="{{{OPERACION}}}" id='boton_extra' title="Guardar" {{{DISABLED}}}>
+            Guardar
+        </button>
+        <a href="//" class="volver_legajo btn btn-default" data-ref="{{{VOLVER}}}" data-bloque="{{{BLOQUE}}}">VOLVER</a>
+      </div>      
+    </div>
+  </div> 
+</form>
+
+

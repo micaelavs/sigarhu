@@ -1,0 +1,70 @@
+{{{INFO_A}}}
+<div class='row'>
+  <div class='col-xs-12 text-right'>
+    <div id='div_agente'>
+      <i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+      Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong> 
+    </div>
+  </div>
+</div>
+{{{/INFO_A}}}
+<div class="row subtitulo">
+</div>
+<br>
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+          <label for="nombre_curso" class="control-label">Código y Título del Curso</label>
+          <select name="nombre_curso" id="nombre_curso" class="form-control activarSelect2">
+            <option value="">Seleccione</option>
+            {{{NOMBRE_CURSO}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/NOMBRE_CURSO}}}
+          </select>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+          <label for="creditos" class="control-label">Créditos</label>
+          <input type="text" id="creditos" name="creditos" class="form-control" disabled value="{{{CREDITOS}}}">
+          <input type="hidden" id="creditoshidden" name="creditos"/>
+      </div>
+     </div> 
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="fecha" class="control-label">Fecha</label>
+          <div class="input-group">
+            <input type="text" class="form-control fecha" name="fecha" value="{{{FECHA}}}">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>
+        </div>
+      </div>
+    <div class="col-md-3">
+      <div class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="tipo_promocion" id="tipo_promocion" {{{CHECKED}}} value="{{{TIPO_PROMOCION}}}">
+          <label for="tipo_promocion" data-toggle="tooltip"><strong> Aplica para Tramo</strong></label>
+        </div>
+      </div>    
+    </div>
+</div>
+<br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_curso" value="{{{OPERACION}}}" id='boton_curso' title="Guardar">
+            Guardar
+        </button>
+        {{{BOTON_VOLVER}}}
+          <a href="{{{HREF}}}" id="{{{ID}}}" class="{{{CLASS}}}"  data-bloque="{{{BLOQUE}}}" data-ref="{{{VOLVER}}}">VOLVER</a> 
+        {{{/BOTON_VOLVER}}}
+      </div>
+    </div>
+  </div>   
+
+
+
+
+
+

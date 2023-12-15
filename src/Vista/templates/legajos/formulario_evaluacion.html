@@ -1,0 +1,96 @@
+<div class='row'>
+	<div class='col-xs-12 text-right'>
+		<div id='div_agente'>
+			<i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+			Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong>
+		</div>
+	</div>
+</div>
+</br>
+{{{CAMPOS_EVALUACION}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <label for="anio" class="control-label">Año Evaluación<span class="required"> *</span></label>
+      <div class='input-group date' id="fecha_pres">
+        <input type='text' class="form-control fecha_anio" id="anio" name="anio" value="{{{ANIO}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>  
+    </div>
+    <div class="col-md-2">
+        <label for="formularios" class="control-label">Formularios<span class="required"> *</span></label>
+        <select name="formularios" id="formularios" class="form-control ">
+          <option value="">Seleccione</option>
+          {{{FORMULARIOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/FORMULARIOS}}}
+        </select>
+    </div>
+    <div class="col-md-2">
+      <label for="resultados" class="control-label">Evaluación<span class="required"> *</span></label>
+      <select name="resultados" id="resultados" class="form-control ">
+        <option value="">Seleccione</option>
+        {{{RESULTADOS}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/RESULTADOS}}}
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="puntaje" class="control-label">Puntaje<span class="required"> *</span></label>
+      <input type="number" class="form-control " id="puntaje" name="puntaje" value="{{{PUNTAJE}}}">
+    </div>
+    {{{BONIFICADO}}}
+    <div class="col-md-2">
+      <div id="cred" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="bonificado" id="bonificado" value="1" {{{CHECKED}}}>
+          <label for="bonificado"  data-toggle="tooltip" ><strong> Bonificaci&oacute;n</strong></label>
+        </div>
+      </div>    
+    </div>
+    {{{/BONIFICADO}}}
+  </div>
+  </br>
+  <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-7">
+    <label for="acto" class="control-label">Acto Administrativo<span class="required"> *</span></label>
+    <input type="text" class="form-control " id="acto" name="acto" value="{{{ACTO}}}" maxlength="50" size="50">
+  </div>
+  <div class="col-md-3 form-group add-file" id="agregar_archivo">
+      <label for="acto" class="control-label">Adjuntar Archivo</label>
+        <input type="file" accept=".pdf"  name="evaluacion_file" id="evaluacion_file" data-show-preview="false" class="filestyle">
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-1"></div>
+  {{{ARCHIVO}}}
+  <div class="col-md-3">
+    <label class="control-label">{{{COMPROBANTE}}}</label>
+      <a class="btn btn-info"  href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true"><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+   </div>
+   {{{/ARCHIVO}}}
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_evaluacion" value="{{{OPERACION}}}" id='boton_evaluacion' title="Guardar">
+            Guardar
+        </button>
+        {{{BOTON_VOLVER}}}
+          <a href="{{{HREF}}}" id="{{{ID}}}" class="{{{CLASS}}}"  data-bloque="{{{BLOQUE}}}" data-ref="{{{VOLVER}}}">VOLVER</a> 
+        {{{/BOTON_VOLVER}}}
+      </div>      
+    </div>
+  </div> 
+</form>
+{{{/CAMPOS_EVALUACION}}}
+
+{{{AVISO_PRESENTACION}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso">{{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO_PRESENTACION}}}

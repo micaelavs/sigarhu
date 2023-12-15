@@ -1,0 +1,37 @@
+.dot .bor {background-color: #0072bc;color:#fff;}
+.dot .cat {background-color: #1193D2;color:#fff; padding: 5px 0 5px 0;}
+.dot .dog {background-color: #5bc0de;color:#fff; padding: 5px 0 5px 0;}
+
+.dot .invi{color:#0072bc; padding: 20px 0 20px 0;}
+
+.dot .invit{color:#0072bc}
+
+.dot .graf{padding: 70px 0 0 0; font-size: 16px;}
+
+.dot .esp{padding: 5px 0 5px 0}
+
+.sec_top{padding:10px 0;}
+.sep {font-size:5px;border-bottom:1px solid #f5f5f5;}
+#barrasdiv > div:nth-child(2) > svg:nth-child(1) > g:nth-child(3) > g:nth-child(2) > g:nth-child(2) > g:nth-child(1) > g:nth-child(4){display:none !important;}
+.menos_top{margin-bottom: 0}
+
+.bot {color:#fff;}
+
+.subtitulo {
+	background-color: #1193d2;
+	margin: 0px -10px 20px -10px;
+	color: #fff;
+}
+
+.btn2 {
+    border: 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 0px 8px;
+    white-space: initial;
+    background-color: #5bc0de !important;
+    border-radius: 5px;
+}
+
+.btn2:hover{background-color: #1193d2 !important;}

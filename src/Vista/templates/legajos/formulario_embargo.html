@@ -1,0 +1,68 @@
+<div class='row'>
+  <div class='col-xs-12 text-right'>
+    <div id='div_agente'>
+      <i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+      Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong> | Cargo:<strong>{{{DENOMINACION}}}</strong>
+    </div>
+  </div>
+</div>
+<div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-gavel"></i>  Embargos</h6></div>
+</div>
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+<div class="row">
+  <div class="col-md-3"></div>
+     <div class="col-md-6">
+       <label for="" class="control-label">Autos <span class="required">*</span></label>
+       <textarea name="autos"  id= "autos" rows="3"  class="form-control">{{{AUTOS}}}</textarea>
+    </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+      <label for="fecha_alta" class="control-label">Fecha Alta <span class="required">*</span></label>
+      <div class='input-group date' id="fecha_alta">
+        <input type='text' class="form-control fecha " id="fecha_alta" name="fecha_alta" value="{{{FECHA_ALTA}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>      
+  </div>
+  <div class="col-md-3" >
+      <label for="fecha_publicacion_designacion" class="control-label">Fecha Cancelación <span class="required">*</span></label>
+      <div class='input-group date' id="fecha_cancelacion">
+        <input type='text' class="form-control fecha libre " id="fecha_cancelacion" name="fecha_cancelacion" value="{{{FECHA_CANCELACION}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>  
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-3"></div>
+    <div class="col-md-3 form-group">
+      <label for="tipo_emb" class="control-label">Tipo Embargo <span class="required">*</span></label>
+      <select class="form-control" id="tipo_embargo" type="text" name="tipo_embargo">
+          <option value="">Seleccione</option>
+          {{{TIPO_EMBARGO}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TIPO_EMBARGO}}}
+      </select>
+    </div>
+     <div class="col-md-3">
+        <label for="campo_monto" class="control-label">Monto <span class="required">*</span></label>
+          <div class='input-group' >
+        <input type="text" name="monto" id="monto" class="form-control" value="{{{MONTO}}}">
+       <span class="input-group-addon"><span id= 'span_monto'></span></span>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_embargo" value="{{{OPERACION}}}" id='boton_embargo' title="Guardar" {{{DISABLED}}}>
+            Guardar
+        </button>
+         <a href="#" class="volver_legajo btn btn-default" data-ref="{{{VOLVER}}}" data-bloque="{{{BLOQUE}}}">VOLVER</a>
+      </div>
+    </div>
+  </div>   
+

@@ -1,0 +1,51 @@
+<form id="{{{FORM}}}" method='POST' action="">
+    <div class="row">
+      <div class="col-md-1"></div>
+       <div class="col-md-3">
+        <div class="form-group">
+          <label class="control-label" for="cuit">CUIT<span class="text-danger"> *</span> </label>
+          <input type="text" min="1" class="form-control" id="cuit" name="cuit" value="{{{CUIT}}}" {{{DISABLED}}}>
+          <span class="label label-danger" id="aviso"></span>
+        </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="control-label" for="nombre_apellido">Nombre y Apellido<span class="text-danger"> *</span> </label>
+          <span class="form-control" id="nombre_apellido" disabled>{{{NOMBRE_APELLIDO}}}</span>
+        </div>
+      </div> 
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="fecha_desde" class="control-label">Fecha Vigencia<span class="text-danger"> *</span></label>
+          <div class='input-group date'>
+            <input type='text' class="form-control fecha " id="fecha_desde" name="fecha_desde" value="{{{FECHA_CONSIDERADA}}}">
+            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="row">
+    <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label class="control-label" for="creditos">Créditos<span class="text-danger"> *</span> </label>
+          <input type="number" min="1" class="form-control" id="creditos" name="creditos" value="{{{CREDITOS}}}">
+        </div>
+      </div>
+       <div class="col-md-7">
+        <div class="form-group">
+          <label class="control-label" for="descripcion ">Descripción</label>
+          <textarea type="text" rows="3" class="form-control" id="descripcion" name="descripcion"> {{{DESCRIPCION}}}</textarea>
+        </div>
+      </div>
+      </div>
+    <br>
+     <div class="row">
+        <div class="col-md-10 text-right">
+          <button type="submit" class="btn btn-primary" data-placement="left" name="boton_creditos" value="{{{OPERACION}}}" id='boton_creditos' title="Guardar">GUARDAR</button>
+          {{{BOTON_VOLVER}}}
+          <a href="{{{HREF}}}" id="{{{ID}}}" class="{{{CLASS}}}"  data-bloque="{{{BLOQUE}}}" data-ref="{{{VOLVER}}}">VOLVER</a> 
+        {{{/BOTON_VOLVER}}}
+        </div>
+     </div>
+    </form>

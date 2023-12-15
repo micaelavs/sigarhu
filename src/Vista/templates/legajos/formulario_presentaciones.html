@@ -1,0 +1,106 @@
+<div class='row'>
+	<div class='col-xs-12 text-right'>
+		<div id='div_agente'>
+			<i class='fa fa-puzzle-piece' aria-hidden='true'></i> 
+			Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong>
+		</div>
+	</div>
+</div>
+</br>
+{{{CAMPOS_PRESENTACION}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+ <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+      <label for="tipo_dj" class="control-label">Tipo Declaración Jurada</label>
+      <select name="tipo_presentacion" id="tipo_presentacion" class="form-control " {{{DISABLED_TIPO_DJ}}}>
+        <option value="">Seleccione</option>
+        {{{TIPO_PRESENTACION}}}
+        <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+        {{{/TIPO_PRESENTACION}}}
+      </select>
+  </div>
+  <div class="col-md-3">
+      <label for="fecha_ultima_presentacion" class="control-label">Fecha Presentación</label>
+      <div class='input-group date' id="fecha_pres">
+        <input type='text' class="form-control fecha " id="fecha_presentacion" name="fecha_presentacion" value="{{{FECHA_PRESENTACION}}}" {{{DISABLED_FECHA_PRESENTACION}}} {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>  
+  </div>
+  <div class="col-md-3">
+   <label for="periodo_presentado" class="control-label">Periodo Presentado</label>
+      <div class='input-group date' id="periodo_pres">
+        <input type='text' class="form-control  " id="periodo" name="periodo" value="{{{PERIODO}}}" {{{DISABLED_PERIODO}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+  </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label for="" class="control-label">Nº Transacción</label>
+    <input type='text' class="form-control " id="nro_transaccion" name="nro_transaccion" value="{{{NRO_TRANSACCION}}}" {{{DISABLED_NRO_TRANSACCION}}}>
+  </div>
+   {{{ARCHIVO}}}
+  <div class="col-md-3">
+      <a class="btn btn-info"  id ="ver_archivo" href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true" {{{DISABLED_VER_COMPROBANTE}}}><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+   </div>
+    {{{/ARCHIVO}}}
+  <div class="col-md-3 form-group add-file" id="agregar_archivo">
+      <label class="control-label">{{{COMPROBANTE}}}</label>
+        <input type="file" accept=".pdf"  name="anticorrupcion_file" id="anticorrupcion_file" data-show-preview="false" class="filestyle" {{{DISABLED}}} {{{DISABLED_COMPROBANTE}}}>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_presentacion" value="{{{OPERACION}}}" id='boton_presentacion' title="Guardar" {{{DISABLED}}}>
+            Guardar
+        </button>
+        <a href="#" class="volver_legajo btn btn-default" data-ref="{{{VOLVER}}}" data-bloque="10">VOLVER</a>
+      </div>      
+    </div>
+  </div> 
+</form>
+
+{{{/CAMPOS_PRESENTACION}}}
+{{{SPAN_PRESENTACION}}}
+<div class="row subtitulo">
+  <div class="col-xs-3 text-left"><h6 class="dom">Presentación</h6></div>
+  <div class="col-xs-9 text-right"></div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-2">
+      <label class="control-label">Tipo Declaración Jurada</label>
+      <span class="form-control" disabled>{{{TIPO_PRESENTACION}}}</span>
+  </div>
+  <div class="col-md-2">
+      <label class="control-label">Fecha Última Presentación</label>
+      <span class="form-control" disabled>{{{FECHA_PRESENTACION}}}</span>
+  </div>
+  <div class="col-md-2 form-group">
+      <label class="control-label">Periodo Presentado</label>
+      <span class="form-control" disabled>{{{PERIODO}}}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-2 form-group">
+      <label class="control-label">Nº de Transacción</label>
+      <span class="form-control" disabled>{{{NRO_TRANSACCION}}}</span>
+  </div>
+   <div class="col-md-3 form-group add-file">
+      <label class="control-label">ADJUNTAR ARCHIVO</label>
+        <input type="file" accept=".pdf"  name="anticorrupcion_file" id="anticorrupcion_file" data-show-preview="false" class="filestyle" disabled>
+  </div>
+</div>
+{{{/SPAN_PRESENTACION}}}
+{{{AVISO_PRESENTACION}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso">{{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO_PRESENTACION}}}

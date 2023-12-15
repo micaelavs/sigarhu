@@ -1,0 +1,105 @@
+<form id="{{{FORM}}}" method='POST' action="" autocomplete="off">
+  <div class="row"  id="url-base" data_url='{{{URL_BASE}}}'></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_saf" class="control-label">Servicio Administrativo Financiero</label>
+        <select name="id_saf" id="id_saf" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SAF}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SAF}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+         <label for="id_jurisdiccion" class="control-label">Jurisdicción</label>
+        <select name="id_jurisdiccion" id="id_jurisdiccion" class="form-control">
+          <option value="">Seleccione</option>
+          {{{JURISDICCIONES}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/JURISDICCIONES}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+         <label for="id_ubicacion_geografica" class="control-label">Ubicación Geográfica</label>
+        <select name="id_ubicacion_geografica" id="id_ubicacion_geografica" class="form-control">
+          <option value="">Seleccione</option>
+          {{{UB_GEOGRAFICAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/UB_GEOGRAFICAS}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_programa" class="control-label">Programa</label>
+        <select name="id_programa" id="id_programa" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PROGRAMAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/PROGRAMAS}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_subprograma" class="control-label">Subprograma</label>
+        <select name="id_subprograma" id="id_subprograma" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SUBPROGRAMAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SUBPROGRAMAS}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_proyecto" class="control-label">Proyecto</label>
+        <select name="id_proyecto" id="id_proyecto" class="form-control">
+          <option value="">Seleccione</option>
+          {{{PROYECTOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/PROYECTOS}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_actividad" class="control-label">Actividad</label>
+        <select name="id_actividad" id="id_actividad" class="form-control">
+          <option value="">Seleccione</option>
+          {{{ACTIVIDADES}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}>{{{TEXT}}}</option>
+          {{{/ACTIVIDADES}}}
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="id_obra" class="control-label">Obra</label>
+        <select name="id_obra" id="id_obra" class="form-control" >
+          <option value="">Seleccione</option>
+          {{{OBRAS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}} {{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/OBRAS}}}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_presupuesto" value="{{{OPERACION}}}" id='boton_presupuesto' title="Guardar">{{{BOTON}}}</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+  </div>
+</form>

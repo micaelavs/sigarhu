@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <label class="float-md-right control-label"><p><i>Campos requeridos(*)</i></p></label>
+    </div>
+</div>
+<form id="{{{FORM}}}" method='POST' action="">
+
+        <div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label"for="nombre">Nombre<span class="text-danger">*</span></label>
+					<input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+				</div>
+			</div>
+		</div>
+		
+    <br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-4 text-right">
+            <button type="submit" class="btn btn-primary" data-placement="left" name="comisiones" value="{{{OPERACION}}}" id='boton_titulo' title="Guardar">GUARDAR</button>
+            <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+        </div>
+    </div>
+</form>

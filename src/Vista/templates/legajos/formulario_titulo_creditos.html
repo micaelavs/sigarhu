@@ -1,0 +1,64 @@
+{{{INFO_A}}}
+<div class="row">
+  <div class="col-xs-12 text-right">
+    <div id="div_agente">
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i> 
+      Agente: <strong>{{{AGENTE}}}</strong> | Cuit:<strong>{{{CUIT}}}</strong> | Cargo:<strong>{{{DENOMINACION}}}</strong>
+    </div>
+  </div>
+</div>
+{{{/INFO_A}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off" enctype="multipart/form-data" >
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+      <label for="fecha_alta" class="control-label">Fecha <span class="required">*</span></label>
+      <div class='input-group date' id="fecha">
+        <input type='text' class="form-control fecha " id="fecha" name="fecha" value="{{{FECHA}}}">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>      
+  </div>
+    <div class="col-md-3">
+        <label for="acto_administrativo" class="control-label">Acto Administrativo <span class="required">*</span></label>
+          <div class='input-group' >
+        <input type="text" name="acto_administrativo" id="acto_administrativo" class="form-control" value="{{{ACTO_ADMINISTRATIVO}}}">
+         <span class="input-group-addon"><span class="fa fa-file"></span></span>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-3"></div>
+     <div class="col-md-3">
+        <label for="creditos" class="control-label">Créditos <span class="required">*</span></label>
+          <div class='input-group' >
+	        <input type="text" name="creditos" id="creditos" class="form-control" value="{{{CREDITOS}}}">
+	        <span class="input-group-addon"><i class="fa fa-percent" aria-hidden="true"></i>
+    	</div>
+  	</div>
+   {{{ARCHIVO}}}
+  <div class="col-md-3">
+      <a class="btn btn-info"  id ="ver_archivo" href="{{{URL}}}" data-toggle="tooltip" data-placement="top" data-id="" title="Descargar Comprobante"  data-toggle="modal" target = "_blank"   aria-hidden="true" {{{DISABLED_VER_COMPROBANTE}}}><i class="fa fa-eye"></i>  Ver Comprobante</a > 
+   </div>
+    {{{/ARCHIVO}}}
+  <div class="col-md-3 form-group add-file" id="agregar_archivo">
+      <label class="control-label">{{{COMPROBANTE}}}</label>
+        <input type="file" accept=".pdf"  name="titulo_credito_file" id="titulo_credito_file" data-show-preview="false" class="filestyle" >
+  </div>
+</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary " type="submit" data-toggle="tooltip" data-placement="top" name="boton_titulo_creditos" value="{{{OPERACION}}}" id='boton_embargo' title="Guardar" {{{DISABLED}}}>
+            Guardar
+        </button>
+         <a href="#" class="volver_legajo btn btn-default" data-ref="{{{VOLVER}}}" data-bloque="{{{BLOQUE}}}">VOLVER</a>
+      </div>
+    </div>
+  </div>   
+
+
+
+
+
+

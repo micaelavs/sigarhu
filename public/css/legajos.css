@@ -1,0 +1,72 @@
+.row.subtitulo {
+	background-color: #1193d2; margin: 0px -10px 20px -10px;
+}
+/*.row > div {
+	margin-top: 10px;
+}*/
+
+.hora {width: 49.5% !important; padding: 2px !important; border-radius: 4px !important;text-align: center;}
+.hora_icon {background-color: #eee;border: 1px solid #ccc;width: 99%;text-align: center;padding:3px 0;color:#1193D2; border-radius: 4px !important;}
+.col-horario {padding: 0 0 0 5px}
+.top150 {margin-left: 13px;}
+.div_hora {width: 14% !important;}
+
+.div-spanhora {width: 100% !important;}
+.span-hora {width: 50% !important; padding: 2px !important; border-radius: 4px !important;text-align: center;}
+
+/*.form-group{text-align: left;}*/
+
+#formacion_titulos .funkyradio,
+#formacion_titulos .funkyradio-primary,
+#formacion_cursos .funkyradio,
+#formacion_cursos .funkyradio-primary {
+	margin: 0 0 0 0 !important;
+	padding: 0 0 0 0 !important;
+}
+#formacion_titulos .funkyradio label,
+#formacion_cursos .funkyradio label {
+	width: 1px !important;
+	margin-top: 0 !important;
+}
+/*#formacion_titulos*/ 
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+/*#formacion_titulos */
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+	    padding-left: 0 !important;
+}
+
+/*#formacion_titulos*/ .funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+/*#formacion_titulos*/ .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+	padding-left: 0 !important;
+	color: #555555;
+}
+
+.presen .funkyradio-primary input[type="radio"]:checked ~ label:before,
+.presen .funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+	    padding-left: 0.6em !important;
+}
+
+.presen .funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.presen .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+	padding-left: 0.6em !important;
+	color: #555555;
+}
+
+a[disabled] { pointer-events: none !important;}
+
+#div_agente {margin: 0px -10px; padding: 3px 15px; color: #fff; background-color: #337ab7;}
+.local_tab {padding:0 10px 10px 10px;border-top:2px solid #337ab7;border:2px solid #337ab7;}
+
+.add-file .input-group-addon, .add-file .input-group-btn { width: 44%; }
+
+.margin_btm {margin-bottom: -12px !important}​
+
+@media screen and (min-width: 480px) {
+.image-agente{width:130px;height:130px}
+}
+
+.tipo{
+	padding-top: 15px;
+	padding-inline-start: 7px;
+	background: #e5e5e5;
+}

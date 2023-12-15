@@ -1,0 +1,135 @@
+{{{INPUT}}}
+<form action="{{{FORM}}}" method="POST" autocomplete="off">
+  <div class="row subtitulo">
+    <div class="col-xs-3 text-left"><h6 class="dom"><i class="fa fa-cubes"></i>  Escalafón</h6></div>
+    <div class="col-xs-9 text-right">
+      <div class="btn-group botonera" data-toggle="buttons">
+        <button class="btn btn-info" id="escalafon_accion_alta" value="alta" title="Debe usarse cuando se hagan cambios en la Modalidad de Vinculación o Situacion de Revista, cambios por promoción de grado o nivel o cambios de porcentages de Compensaciones. Esta opción guarda registro historico de la situación anterior.">Cambio de Escalafón</button>
+        <button class="btn btn-primary" id="escalafon_accion_modificar" value="modificar" title="Debe usarse para corregir datos cargados con errores. Esta opción no crea nuevo registro, sobrescribe el existente.">Modificar Escalafón Actual</button>
+        <input type="hidden" value="modificar" id="escalafon_accion" name="escalafon_accion">
+      </div>
+    </div>
+  </div>
+ <div id="escalafonaria">
+{{{SITUACION_ESCALAFONARIA}}}
+</div>
+{{{SUB_TITULO_EXC}}}
+   <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-file-text-o"></i> Articulo Nº14</h6></div>
+  </div>
+
+   <div class="row">
+    <div class="col-md-4">
+      {{{EXC_ART_14}}}
+      <div id="cred" class="funkyradio">
+        <div class="funkyradio-primary">
+          <input class="form-control" type="checkbox" name="exc_art_14" id="exc_art_14" value="1" {{{CHECKED}}}>
+          <label for="exc_art_14"  data-toggle="tooltip" >Excepción Artículo 14</label>
+       </div>
+      </div>
+      {{{/EXC_ART_14}}}
+      {{{SPAN_EXC_ART_14}}}
+          <label for="exc_art_14" class="control-label" >Excepción Artículo 14</label>
+          <span class="form-control" type="checkbox" name="exc_art_14" id="exc_art_14" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_EXC_ART_14}}}
+    </div>
+    <div class="col-md-8">
+      {{{FORMACION}}}
+      <div class="form-group">
+        <label for="formacion" id="label_formacion"  class="control-label">Opciones Art.14</label>
+        <select name="formacion[]" multiple="multiple"  id="formacion" class="form-control">
+          <option value="">Seleccione Opciones</option>
+            {{{FORMACIONES}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/FORMACIONES}}}
+        </select>
+      </div>
+      {{{/FORMACION}}}
+      {{{SPAN_FORMACION}}}
+      <input type="hidden" name="formacion" id="formacion" value="{{{ID}}}">
+      <label for="formacion" class="control-label">Opciones Art.14</label>
+      <span class="form-control" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_FORMACION}}} 
+    </div>
+
+</div>
+<br>
+{{{/SUB_TITULO_EXC}}}
+ <div class="row subtitulo">
+    <div class="col-xs-12 text-left"><h6 class="dom"><i class="fa fa-users"></i> Datos Gremiales</h6></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      {{{DELEGADO_GREMIAL}}}
+      <div  class="funkyradio" id="gremial">
+        <div class="funkyradio-primary" id="gremial_primary">
+          <input class="form-control" type="checkbox" name="delegado_gremial" id="delegado_gremial" value="1" {{{CHECKED}}}>
+          <label for="delegado_gremial"  data-toggle="tooltip" >Delegado Gremial</label>
+       </div>
+      </div>
+      {{{/DELEGADO_GREMIAL}}}
+      {{{SPAN_DELEGADO_GREMIAL}}}
+      <label for="delegado_gremial" class="control-label" >Delegado Gremial</label>
+      <span class="form-control" type="checkbox" name="delegado_gremial" id="delegado_gremial" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_DELEGADO_GREMIAL}}}
+  </div>
+    <div class="col-md-4">
+      <div class="form-group">
+      {{{FECHA_VIGENCIA_MANDATO}}}
+        <label for="fecha_vigencia" id="label_fecha_vigencia" class="control-label">Fecha de Vigencia de Mandato</label>
+      <div class='input-group date' id="fecha_vigencia">
+
+        <input type='text' class="form-control fecha" id="fecha_vigencia" name="fecha_vigencia" value="{{{FECHA_VIGENCIA}}}" {{{DISABLED}}}>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>    
+      {{{/FECHA_VIGENCIA_MANDATO}}} 
+      {{{SPAN_FECHA_VIGENCIA_MANDATO}}}
+        <label for="span_fecha_vigencia" id="label_fecha_v" class="control-label">Fecha de Vigencia de Mandato</label>
+        <input type="hidden" name="fecha_vigencia" id="fecha_vigencia" value="{{{VALUE}}}}">
+        <span id="span_fecha_vigencia" class="form-control" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_FECHA_VIGENCIA_MANDATO}}}    
+    </div>    
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="id_sindicato" id="label_sindicato" class="control-label">Sindicato</label>
+      {{{ID_SINDICATO}}}
+        <select name="id_sindicato" id="id_sindicato" class="form-control">
+          <option value="">Seleccione</option>
+          {{{SINDICATOS}}}
+          <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/SINDICATOS}}}
+        </select>
+      {{{/ID_SINDICATO}}}
+      {{{SPAN_ID_SINDICATO}}}
+       <label for="id_sindicato" id="label_sindicato" class="control-label">Sindicato</label>
+        <input type="hidden" name="id_sindicato" id="id_sindicato" value="{{{ID}}}">
+        <span class="form-control" disabled>{{{VALUE}}}</span>
+      {{{/SPAN_ID_SINDICATO}}}
+    </div>
+  </div> 
+</div>
+  <div id= "botones" class="row">
+    <div class="col-md-12">
+      <div class="text-right">
+        <button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="top" name="gestionar_form" value="situacion_escalafonaria" title="Guardar">
+            Guardar
+        </button>
+        <a href="{{{VOLVER}}}" class="btn btn-default">VOLVER</a>
+      </div>
+    </div>
+  </div>
+</form>
+{{{ADJUNTAR_DOC}}}
+{{{/INPUT}}}
+{{{SPANE}}}
+	{{{SPAN}}}
+	{{{ADJUNTAR_DOC}}}
+{{{/SPANE}}}
+{{{AVISO}}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning bloque_aviso"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> {{{MSJ}}}</div>
+    </div>
+  </div>
+{{{/AVISO}}}
